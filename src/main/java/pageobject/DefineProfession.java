@@ -21,40 +21,40 @@ public class DefineProfession extends GenericBaseClass {
         }
     }
 
-    public WebElement locateProfessionTextBox ( ) throws IOException {
+    public WebElement getProfessionTextBox ( ) throws IOException {
         return readFile.getElement ( file, "professiontextbox" );
     }
 
-    public WebElement locateSaveButton ( ) throws IOException {
+    public WebElement getSaveButton ( ) throws IOException {
         return readFile.getElement ( file, "savebutton" );
     }
 
-    public WebElement locatePrintButton ( ) throws IOException {
+    public WebElement getPrintButton ( ) throws IOException {
         return readFile.getElement ( file, "printbutton" );
     }
 
-    public WebElement locateCancelButton ( ) throws IOException {
+    public WebElement getCancelButton ( ) throws IOException {
         return readFile.getElement ( file, "cancelbutton" );
     }
 
-    public WebElement locateViewButton ( ) throws IOException {
+    public WebElement getViewButton ( ) throws IOException {
         return readFile.getElement ( file, "viewbutton" );
 
     }
 
-    public WebElement locateDeleteButton ( ) throws IOException {
+    public WebElement getDeleteButton ( ) throws IOException {
         return readFile.getElement ( file, "deletebutton" );
     }
 
-    public WebElement locateModifyButton ( ) throws IOException {
+    public WebElement getModifyButton ( ) throws IOException {
         return readFile.getElement ( file, "modifybutton" );
     }
 
-    public List <WebElement > locateSelectButton ( ) throws IOException {
+    public List <WebElement> getSelectButton ( ) throws IOException {
          return readFile.getElements ( file, "selectbutton" );
     }
 
     public WebElement getSavedProfessionValue (int i) throws IOException {
-        return locateSelectButton ().get ( i-1 );
+        return getSelectButton ( ).get ( i - 1 );
     }
 }

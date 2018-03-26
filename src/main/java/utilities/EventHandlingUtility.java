@@ -17,6 +17,10 @@ public class EventHandlingUtility {
         textfield.sendKeys ( Text );
     }
 
+    public void clearText (WebElement textfield) {
+        textfield.clear ( );
+    }
+
     public void click (WebElement element) {
         element.click ( );
     }

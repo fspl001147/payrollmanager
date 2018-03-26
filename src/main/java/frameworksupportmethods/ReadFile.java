@@ -12,7 +12,7 @@ import java.util.Properties;
 
 import static webdriver.AppDriver.getCurrentDriver;
 
-public class ReadFile extends GenericBaseClass {
+public class ReadFile {
     String values = "";
     private Properties prop = new Properties ( );
 

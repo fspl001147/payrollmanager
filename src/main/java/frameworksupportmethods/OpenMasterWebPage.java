@@ -7,6 +7,7 @@ package frameworksupportmethods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import utilities.EventHandlingUtility;
 import webdriver.AppDriver;
 
 import java.io.File;
@@ -18,12 +19,12 @@ public class OpenMasterWebPage extends GenericBaseClass {
 
     public void openMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
 
-        /*Storing webpage and submenu name in a variable*/
-        String sub_menu_name = readFile.readProperty ( WebPage_path, submenu_name );
-        String web_page_name = readFile.readProperty ( WebPage_path, webpage_name );
+        /*Storing webpage and submenu value in a variable*/
+        String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
+        String web_page_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
 
         /*Open main menu*/
-        event.click ( readFile.getElement ( mainMenuPath, mainmenu_name ) );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ) );
 
         /*Storing names of all webpages in a web element list*/
         List <WebElement> master_dd = AppDriver.getCurrentDriver ( ).findElements ( By.xpath ( "//ul//li/a" ) );
@@ -32,7 +33,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         for ( int i = 0; i < master_dd.size ( ); i++ ) {
             WebElement mainmenudd_item = master_dd.get ( i );
             String innerHTML = mainmenudd_item.getAttribute ( "innerHTML" );
-            if ( innerHTML.contentEquals ( sub_menu_name ) ) {
+            if ( innerHTML.contentEquals ( sub_menu_name_value ) ) {
                 mainmenudd_item.click ( );
                 break;
             }
@@ -43,7 +44,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         for ( int i = 0; i < submenu_dd.size ( ); i++ ) {
             WebElement submenudd_item = submenu_dd.get ( i );
             String session_inner_HTML = submenudd_item.getAttribute ( "innerHTML" );
-            if ( session_inner_HTML.contentEquals ( web_page_name ) ) {
+            if ( session_inner_HTML.contentEquals ( web_page_name_value ) ) {
                 submenudd_item.click ( );
                 break;
             }

@@ -1,9 +1,8 @@
 package webdriver;
 
 import frameworksupportmethods.GenericBaseClass;
-import org.openqa.selenium.WebElement;
+import frameworksupportmethods.ReadFile;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +16,7 @@ public class DriverMethods extends GenericBaseClass {
     }
 
     public void getURL ( ) throws IOException {
-        getCurrentDriver ( ).get ( readFile.readProperty ( fileConfig, "url" ) );
+        getCurrentDriver ( ).get ( new ReadFile ( ).readProperty ( fileConfig, "url" ) );
     }
 
     public void waitImplicitly (int time) throws IOException {

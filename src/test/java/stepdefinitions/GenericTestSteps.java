@@ -11,8 +11,10 @@ import webdriver.DriverMethods;
 import java.io.File;
 
 public class GenericTestSteps {
+
     private File fileConfig = new File ( "configuration\\GenericConfig.properties" );
     private DriverMethods dm = new DriverMethods ( );
+    private UIMap uiMap = new UIMap ( );
     private EventHandlingUtility event = new EventHandlingUtility ( );
     private ReadFile readfile = new ReadFile ( );
 
@@ -23,8 +25,10 @@ public class GenericTestSteps {
 
     @When("^user enter username and password$")
     public void userEnterUsernameAndPassword ( ) throws Throwable {
-        event.enterText ( new UIMap ( ).getUsername ( ), readfile.readProperty ( fileConfig, "login" ) );
-        event.enterText ( new UIMap ( ).getPassword ( ), readfile.readProperty ( fileConfig, "pwd" ) );
+        String login_id = readfile.readProperty ( fileConfig, "login" );
+        String password = readfile.readProperty ( fileConfig, "pwd" );
+        event.enterText ( uiMap.getUsername ( ), login_id );
+        event.enterText ( uiMap.getPassword ( ), password );
     }
 
     @When("^click sign in to open erp home page$")

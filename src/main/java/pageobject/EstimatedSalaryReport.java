@@ -1,13 +1,12 @@
 package pageobject;
 
 import frameworksupportmethods.GenericBaseClass;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import frameworksupportmethods.ReadFile;
+import utilities.EventHandlingUtility;
+import utilities.OpenPayrollWebpage;
 
 import java.io.File;
 import java.io.IOException;
-
-import static webdriver.AppDriver.driver;
 
 public class EstimatedSalaryReport extends GenericBaseClass {
 
@@ -15,8 +14,8 @@ public class EstimatedSalaryReport extends GenericBaseClass {
 
     public void openEstimatedSalaryReportFrame() {
         try {
-            openPayrollWebpage.Estimated_Salary_Report ();
-            event.switchToFrame ( readFile.getElement ( file, "frame" ) );
+            new OpenPayrollWebpage ( ).Estimated_Salary_Report ( );
+            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ) );
 
         } catch (IOException e) {
             System.out.println ( e.getMessage () );

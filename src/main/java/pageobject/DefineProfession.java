@@ -1,7 +1,10 @@
 package pageobject;
 
 import frameworksupportmethods.GenericBaseClass;
+import frameworksupportmethods.ReadFile;
 import org.openqa.selenium.WebElement;
+import utilities.EventHandlingUtility;
+import utilities.OpenPayrollWebpage;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,8 +15,8 @@ public class DefineProfession extends GenericBaseClass {
 
     public void openDefineProfessionFrame ( ) {
         try {
-            openPayrollWebpage.Define_Profession ( );
-            event.switchToFrame ( readFile.getElement ( file, "frame" ) );
+            new OpenPayrollWebpage ( ).Define_Profession ( );
+            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ) );
 
         } catch (IOException e) {
             System.out.println ( e.getMessage ( ) );
@@ -22,36 +25,36 @@ public class DefineProfession extends GenericBaseClass {
     }
 
     public WebElement getProfessionTextBox ( ) throws IOException {
-        return readFile.getElement ( file, "professiontextbox" );
+        return new ReadFile ( ).getElement ( file, "professiontextbox" );
     }
 
     public WebElement getSaveButton ( ) throws IOException {
-        return readFile.getElement ( file, "savebutton" );
+        return new ReadFile ( ).getElement ( file, "savebutton" );
     }
 
     public WebElement getPrintButton ( ) throws IOException {
-        return readFile.getElement ( file, "printbutton" );
+        return new ReadFile ( ).getElement ( file, "printbutton" );
     }
 
     public WebElement getCancelButton ( ) throws IOException {
-        return readFile.getElement ( file, "cancelbutton" );
+        return new ReadFile ( ).getElement ( file, "cancelbutton" );
     }
 
     public WebElement getViewButton ( ) throws IOException {
-        return readFile.getElement ( file, "viewbutton" );
+        return new ReadFile ( ).getElement ( file, "viewbutton" );
 
     }
 
     public WebElement getDeleteButton ( ) throws IOException {
-        return readFile.getElement ( file, "deletebutton" );
+        return new ReadFile ( ).getElement ( file, "deletebutton" );
     }
 
     public WebElement getModifyButton ( ) throws IOException {
-        return readFile.getElement ( file, "modifybutton" );
+        return new ReadFile ( ).getElement ( file, "modifybutton" );
     }
 
     public List <WebElement> getSelectButton ( ) throws IOException {
-         return readFile.getElements ( file, "selectbutton" );
+        return new ReadFile ( ).getElements ( file, "selectbutton" );
     }
 
     public WebElement getSavedProfessionValue (int i) throws IOException {

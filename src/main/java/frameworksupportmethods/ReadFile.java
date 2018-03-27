@@ -13,8 +13,8 @@ import java.util.Properties;
 import static webdriver.AppDriver.getCurrentDriver;
 
 public class ReadFile {
+    private static Properties prop = new Properties ( );
     String values = "";
-    private Properties prop = new Properties ( );
 
     private FileInputStream readFile (File file) throws FileNotFoundException {
         return new FileInputStream ( file );
@@ -33,29 +33,51 @@ public class ReadFile {
         String locator = readProperty ( file, element + "_type" );
         WebElement webelement = null;
 
-        switch (locator) {
-            case "id":
-                webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
-                break;
-            case "name":
-                webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
-                break;
-            case "xpath":
-                webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
-                break;
-            case "linktext":
-                webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
-                break;
-            case "tagname":
-                webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
-                break;
-            case "cssselector":
-                webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
-                break;
-            case "classname":
-                webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
-                break;
+        if ( locator.equalsIgnoreCase ( "id" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
         }
+        if ( locator.equalsIgnoreCase ( "name" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
+        }
+        if ( locator.equalsIgnoreCase ( "xpath" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
+        }
+        if ( locator.equalsIgnoreCase ( "linktext" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
+        }
+        if ( locator.equalsIgnoreCase ( "tagname" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
+        }
+        if ( locator.equalsIgnoreCase ( "cssselector" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
+        }
+        if ( locator.equalsIgnoreCase ( "classname" ) ) {
+            webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
+        }
+
+//        switch (locator) {
+//            case "id":
+//                webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
+//                break;
+//            case "name":
+//                webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
+//                break;
+//            case "xpath":
+//                webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
+//                break;
+//            case "linktext":
+//                webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
+//                break;
+//            case "tagname":
+//                webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
+//                break;
+//            case "cssselector":
+//                webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
+//                break;
+//            case "classname":
+//                webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
+//                break;
+//        }
 
         return webelement;
     }

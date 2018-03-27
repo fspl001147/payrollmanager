@@ -13,8 +13,8 @@ public class EventHandlingUtility {
         getCurrentDriver ( ).switchTo ( ).frame ( frame );
     }
 
-    public void enterText (WebElement textfield, String Text) {
-        textfield.sendKeys ( Text );
+    public void enterText (WebElement textfield, String text) {
+        textfield.sendKeys ( text );
     }
 
     public void clearText (WebElement textfield) {

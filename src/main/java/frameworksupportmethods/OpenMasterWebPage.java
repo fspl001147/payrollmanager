@@ -5,6 +5,7 @@
 
 package frameworksupportmethods;
 
+import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
@@ -16,8 +17,7 @@ import java.util.List;
 
 public class OpenMasterWebPage extends GenericBaseClass {
 
-
-    public void openMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
+    public void oldOpenMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
 
         /*Storing webpage and submenu value in a variable*/
         String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
@@ -48,6 +48,33 @@ public class OpenMasterWebPage extends GenericBaseClass {
                 submenudd_item.click ( );
                 break;
             }
+        }
+    }
+
+    public void newOpenMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException, InterruptedException {
+        String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
+        String web_page_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
+        List <WebElement> submenu_dd = AppDriver.getCurrentDriver ( ).findElements ( By.xpath ( "//ul[@class ='sub-menu' ]//li/a" ) );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ) );
+        for ( WebElement element : submenu_dd ) {
+            String pagevalue = element.getAttribute ( "innerHTML" );
+            if ( pagevalue.contains ( "<p>" ) ) {
+                Thread.sleep ( 1000 );
+                if ( StringUtils.substringBetween ( pagevalue, "<p>", "</p>" ).contentEquals ( sub_menu_name_value ) ) {
+                    element.click ( );
+                } else {
+                    if ( StringUtils.substringBetween ( pagevalue, "<p>", "</p>" ).contentEquals ( web_page_name_value ) ) {
+                        element.click ( );
+                        break;
+                    }
+                }
+            } else {
+                if ( pagevalue.contentEquals ( web_page_name_value ) ) {
+                    element.click ( );
+                    break;
+                }
+            }
+
         }
     }
 }

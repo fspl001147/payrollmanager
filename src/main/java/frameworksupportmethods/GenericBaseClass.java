@@ -6,7 +6,7 @@ public abstract class GenericBaseClass {
 
     // protected static Collection<String> scenario = null;
     // protected ReadFile readFile = new ReadFile ( );
-    //  protected OpenMasterWebPage openMasterWebPage = new OpenMasterWebPage ( );
+    //  protected OpenMasterWebPage oldOpenMasterWebPage = new OpenMasterWebPage ( );
     //  protected EventHandlingUtility event = new EventHandlingUtility ();
     //   protected DriverMethods dm = new DriverMethods ( );
 //    protected OpenPayrollWebpage openPayrollWebpage = new OpenPayrollWebpage();

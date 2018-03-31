@@ -16,7 +16,7 @@ public class DefineStaffType extends GenericBaseClass {
     public void openDefineStaffTypeFrame ( ) {
         try {
             new OpenPayrollWebpage ( ).Define_Staff_Type ( );
-            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ) );
+            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ), 20 );
 
         } catch (IOException e) {
             System.out.println ( e.getMessage ( ) );

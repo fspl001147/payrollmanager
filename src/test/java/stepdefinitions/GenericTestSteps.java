@@ -27,18 +27,19 @@ public class GenericTestSteps {
     public void userEnterUsernameAndPassword ( ) throws Throwable {
         String login_id = readfile.readProperty ( fileConfig, "login" );
         String password = readfile.readProperty ( fileConfig, "pwd" );
-        event.enterText ( uiMap.getUsername ( ), login_id );
-        event.enterText ( uiMap.getPassword ( ), password );
+        event.enterText ( uiMap.getUsername ( ), login_id, 10 );
+        event.enterText ( uiMap.getPassword ( ), password, 10 );
     }
 
     @When("^click sign in to open erp home page$")
     public void clickSignInToOpenErpHomePage ( ) throws Throwable {
-        event.click ( new UIMap ( ).getSignIn ( ) );
+        event.click ( new UIMap ( ).getSignIn ( ), 10 );
     }
 
     @Then("^user click payroll manager logo$")
     public void userClickPayrollManagerLogo ( ) throws Throwable {
-        event.click ( new UIMap ( ).getPayrollManagerLogo ( ) );
+        event.click ( new UIMap ( ).getPayrollManagerLogo ( ), 10 );
+        dm.switchToWindow ( "PayRoll" );
     }
 
 }

@@ -15,7 +15,7 @@ public class EstimatedSalaryReport extends GenericBaseClass {
     public void openEstimatedSalaryReportFrame() {
         try {
             new OpenPayrollWebpage ( ).Estimated_Salary_Report ( );
-            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ) );
+            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ), 10 );
 
         } catch (IOException e) {
             System.out.println ( e.getMessage () );

@@ -1,19 +1,24 @@
 package utilities;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 
+import static webdriver.AppDriver.driver;
 import static webdriver.AppDriver.getCurrentDriver;
 
 public class EventHandlingUtility {
-
-
-    public void switchToFrame (WebElement frame) throws IOException {
+    public void switchToFrame (WebElement frame, int time) throws IOException {
+        WebDriverWait wait = new WebDriverWait ( driver, time );
+        wait.until ( ExpectedConditions.visibilityOf ( frame ) );
         getCurrentDriver ( ).switchTo ( ).frame ( frame );
     }
 
-    public void enterText (WebElement textfield, String text) {
+    public void enterText (WebElement textfield, String text, int time) {
+        WebDriverWait wait = new WebDriverWait ( driver, 10 );
+        wait.until ( ExpectedConditions.visibilityOf ( textfield ) );
         textfield.sendKeys ( text );
     }
 
@@ -21,8 +26,9 @@ public class EventHandlingUtility {
         textfield.clear ( );
     }
 
-    public void click (WebElement element) {
+    public void click (WebElement element, int time) {
+        WebDriverWait wait = new WebDriverWait ( driver, 10 );
+        wait.until ( ExpectedConditions.visibilityOf ( element ) );
         element.click ( );
     }
-
 }

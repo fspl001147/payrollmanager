@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import static webdriver.AppDriver.driver;
 import static webdriver.AppDriver.getCurrentDriver;
 
 public class DriverMethods extends GenericBaseClass {
@@ -27,8 +28,14 @@ public class DriverMethods extends GenericBaseClass {
         getCurrentDriver ( ).switchTo ( ).defaultContent ( );
     }
 
-    public void switchToWindow (int winindex) throws IOException {
+    public void switchToWindow (String wintitle) throws IOException {
         ArrayList <String> windows = new ArrayList <String> ( getCurrentDriver ( ).getWindowHandles ( ) );
-        getCurrentDriver ( ).switchTo ( ).window ( windows.get ( winindex ) );
+        for ( int i = 0; i <= 8; i++ ) {
+            if ( driver.getTitle ( ).equalsIgnoreCase ( wintitle ) ) {
+                break;
+            } else {
+                getCurrentDriver ( ).switchTo ( ).window ( windows.get ( i + 1 ) );
+            }
+        }
     }
 }

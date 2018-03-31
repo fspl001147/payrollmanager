@@ -14,5 +14,5 @@ import org.junit.runner.RunWith;
         "junit:target/cucumber.xml"}
         //,tags= {"@scenario1"}
 )
-public class DefineProfessionRunner {
+public class DefineStaffTypeRunner {
 }

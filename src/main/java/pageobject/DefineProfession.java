@@ -16,7 +16,7 @@ public class DefineProfession extends GenericBaseClass {
     public void openDefineProfessionFrame ( ) {
         try {
             new OpenPayrollWebpage ( ).Define_Profession ( );
-            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ) );
+            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame" ), 20 );
 
         } catch (IOException e) {
             System.out.println ( e.getMessage ( ) );

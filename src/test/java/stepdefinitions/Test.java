@@ -24,13 +24,17 @@ public class Test extends GenericBaseClass {
     @And("^enter values in staff type textbox for acceptability and verify on each row$")
     public void enterValuesInStaffTypeTextboxForAcceptabilityAndVerifyOnEachRow (DataTable acceptability) throws Throwable {
         List <List <String>> data = acceptability.raw ( );
-        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 0 ).get ( 1 ).toString ( ) );
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 0 ).get ( 1 ).toString ( ), 10 );
+        Thread.sleep ( 3000 );
         event.clearText ( new DefineStaffType ( ).getStaffTypeTextbox ( ) );
-        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 1 ).get ( 1 ).toString ( ) );
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 1 ).get ( 1 ).toString ( ), 10 );
+        Thread.sleep ( 3000 );
         event.clearText ( new DefineStaffType ( ).getStaffTypeTextbox ( ) );
-        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 2 ).get ( 1 ).toString ( ) );
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 2 ).get ( 1 ).toString ( ), 10 );
+        Thread.sleep ( 3000 );
         event.clearText ( new DefineStaffType ( ).getStaffTypeTextbox ( ) );
-        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 3 ).get ( 1 ).toString ( ) );
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), data.get ( 3 ).get ( 1 ).toString ( ), 10 );
+        Thread.sleep ( 3000 );
         event.clearText ( new DefineStaffType ( ).getStaffTypeTextbox ( ) );
         // Write code here that turns the phrase above into concrete actions
         // For automatic transformation, change DataTable to one of

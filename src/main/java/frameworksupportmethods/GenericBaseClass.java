@@ -1,12 +1,13 @@
 package frameworksupportmethods;
 
 import java.io.File;
+import java.util.Collection;
 
 public abstract class GenericBaseClass {
 
-    // protected static Collection<String> scenario = null;
+    protected static Collection <String> scenario = null;
     // protected ReadFile readFile = new ReadFile ( );
-    //  protected OpenMasterWebPage oldOpenMasterWebPage = new OpenMasterWebPage ( );
+    //  protected OpenMasterWebPage openWebPage = new OpenMasterWebPage ( );
     //  protected EventHandlingUtility event = new EventHandlingUtility ();
     //   protected DriverMethods dm = new DriverMethods ( );
 //    protected OpenPayrollWebpage openPayrollWebpage = new OpenPayrollWebpage();

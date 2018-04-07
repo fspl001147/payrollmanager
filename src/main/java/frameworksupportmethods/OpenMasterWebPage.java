@@ -19,7 +19,7 @@ import static webdriver.AppDriver.driver;
 
 public class OpenMasterWebPage extends GenericBaseClass {
 
-    public void oldOpenMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
+    public void openWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
 
         /*Storing webpage and submenu value in a variable*/
         String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
@@ -53,7 +53,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         }
     }
 
-    public void newOpenMasterWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException, InterruptedException {
+    public void openWebPage (String mainmenu_name, File WebPage_path, String submenu_name, String webpage_name) throws IOException, InterruptedException {
         String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
         String web_page_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
         List <WebElement> submenu_dd = AppDriver.getCurrentDriver ( ).findElements ( By.xpath ( "//ul[@class ='sub-menu' ]//li/a" ) );
@@ -80,7 +80,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         }
     }
 
-    public void openWebpageWithSubMenu (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws Exception {
+    public void openWebPage (String mainmenu_name, String submenu_name, File WebPage_path, String webpage_name) throws Exception {
 
         String submenu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
@@ -97,8 +97,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         new EventHandlingUtility ( ).click ( driver.findElement ( By.xpath ( xpathfordesiredwebpage ) ), 20 );
     }
 
-    public void openWebpageWithoutSubMenu (File WebPage_path, String mainmenu_name, String webpage_name)
-    throws Exception {
+    public void openWebPage (File WebPage_path, String mainmenu_name, String webpage_name) throws Exception {
 
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
         // Click to Main Menu (Global Master)

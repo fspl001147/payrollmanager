@@ -11,168 +11,168 @@ public class OpenPayrollWebpage extends GenericBaseClass {
 
     public void DefineAcademicYear ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineSession", "DefineAcademicYear" );
+            o1.openWebPage ( "Global_Master1", "DefineSession", payroll_WebpageMenuPath, "DefineAcademicYear" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineSession", "DefineAcademicYear" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineSession", "DefineAcademicYear" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineSession", "DefineAcademicYear" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineSession", "DefineAcademicYear" );
             }
         }
     }
 
     public void Define_Financial_Year ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineSession", "DefineFinancialYear" );
+            o1.openWebPage ( "Global_Master1", "DefineSession", payroll_WebpageMenuPath, "DefineFinancialYear" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineSession", "DefineFinancialYear" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineSession", "DefineFinancialYear" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineSession", "DefineFinancialYear" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineSession", "DefineFinancialYear" );
             }
         }
     }
 
     public void Define_Profession ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineProfession" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineProfession" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineProfession", "DefineProfession" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineProfession", "DefineProfession" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineProfession", "DefineProfession" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineProfession", "DefineProfession" );
             }
         }
     }
 
     public void Define_Staff_Type ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaffType" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaffType" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaffType", "DefineStaffType" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineStaffType", "DefineStaffType" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineStaffType", "DefineStaffType" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineStaffType", "DefineStaffType" );
             }
         }
     }
 
     public void Define_Designation ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineDesignation" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDesignation" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDesignation", "DefineDesignation" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineDesignation", "DefineDesignation" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineDesignation", "DefineDesignation" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineDesignation", "DefineDesignation" );
             }
         }
     }
 
     public void Define_Department ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineDepartment" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDepartment" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDepartment", "DefineDepartment" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineDepartment", "DefineDepartment" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineDepartment", "DefineDepartment" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineDepartment", "DefineDepartment" );
             }
         }
     }
 
     public void Define_Staff ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaff" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaff" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaff", "DefineStaff" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineStaff", "DefineStaff" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineStaff", "DefineStaff" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineStaff", "DefineStaff" );
             }
         }
     }
 
     public void Modify_Staff_in_Bulk ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "ModifyStaffinBulk" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ModifyStaffinBulk" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ModifyStaffinBulk", "ModifyStaffinBulk" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "ModifyStaffinBulk", "ModifyStaffinBulk" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "ModifyStaffinBulk", "ModifyStaffinBulk" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "ModifyStaffinBulk", "ModifyStaffinBulk" );
             }
         }
     }
 
     public void Rejoin_Staff ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "RejoinStaff" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "RejoinStaff" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "RejoinStaff", "RejoinStaff" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "RejoinStaff", "RejoinStaff" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "RejoinStaff", "RejoinStaff" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "RejoinStaff", "RejoinStaff" );
             }
         }
     }
 
     public void Define_Reminder ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "DefineReminder" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineReminder" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineReminder", "DefineReminder" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "DefineReminder", "DefineReminder" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineReminder", "DefineReminder" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "DefineReminder", "DefineReminder" );
             }
         }
     }
 
     public void Assign_Transport_To_Staff ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "AssignTransportToStaff" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "AssignTransportToStaff" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "AssignTransportToStaff", "AssignTransportToStaff" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "AssignTransportToStaff", "AssignTransportToStaff" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "AssignTransportToStaff", "AssignTransportToStaff" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "AssignTransportToStaff", "AssignTransportToStaff" );
             }
         }
     }
 
     public void Report_Setting ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Global_Master1", "ReportSetting" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ReportSetting" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ReportSetting", "ReportSetting" );
+                o1.openWebPage ( "Global_Master1", payroll_WebpageMenuPath, "ReportSetting", "ReportSetting" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Global_Master", "ReportSetting", "ReportSetting" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master", "ReportSetting", "ReportSetting" );
             }
         }
     }
 
     public void Define_Global_Settings ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Master_Settings1", "DefineGlobalSettings" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "DefineGlobalSettings" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "DefineGlobalSettings", "DefineGlobalSettings" );
+                o1.openWebPage ( "Master_Settings1", payroll_WebpageMenuPath, "DefineGlobalSettings", "DefineGlobalSettings" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings", "DefineGlobalSettings", "DefineGlobalSettings" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings", "DefineGlobalSettings", "DefineGlobalSettings" );
             }
         }
     }
 
     public void Change_Academic ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Master_Settings1", "ChangeAcademic" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ChangeAcademic" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ChangeAcademic", "ChangeAcademic" );
+                o1.openWebPage ( "Master_Settings1", payroll_WebpageMenuPath, "ChangeAcademic", "ChangeAcademic" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings", "ChangeAcademic", "ChangeAcademic" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings", "ChangeAcademic", "ChangeAcademic" );
             }
         }
 //
@@ -180,36 +180,36 @@ public class OpenPayrollWebpage extends GenericBaseClass {
 
     public void Report_Layout_Setting ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Master_Settings1", "ReportLayoutSetting" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ReportLayoutSetting" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ReportLayoutSetting", "ReportLayoutSetting" );
+                o1.openWebPage ( "Master_Settings1", payroll_WebpageMenuPath, "ReportLayoutSetting", "ReportLayoutSetting" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings", "ReportLayoutSetting", "ReportLayoutSetting" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings", "ReportLayoutSetting", "ReportLayoutSetting" );
             }
         }
     }
 
     public void Session_Transfer ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Master_Settings1", "SessionTransfer" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "SessionTransfer" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "SessionTransfer", "SessionTransfer" );
+                o1.openWebPage ( "Master_Settings1", payroll_WebpageMenuPath, "SessionTransfer", "SessionTransfer" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Master_Settings", "SessionTransfer", "SessionTransfer" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings", "SessionTransfer", "SessionTransfer" );
             }
         }
     }
 
     public void Define_Salary_Account ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryAccount" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryAccount" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryAccount", "DefineSalaryAccount" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "DefineSalaryAccount", "DefineSalaryAccount" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "DefineSalaryAccount", "DefineSalaryAccount" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "DefineSalaryAccount", "DefineSalaryAccount" );
             }
         }
 
@@ -217,1056 +217,1056 @@ public class OpenPayrollWebpage extends GenericBaseClass {
 
     public void Define_Salary_Month ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryMonth" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryMonth" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryMonth", "DefineSalaryMonth" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "DefineSalaryMonth", "DefineSalaryMonth" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "DefineSalaryMonth", "DefineSalaryMonth" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "DefineSalaryMonth", "DefineSalaryMonth" );
             }
         }
     }
 
     public void Assign_Info_Bulk ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "AssignInfoBulk" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "AssignInfoBulk" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "AssignInfoBulk", "AssignInfoBulk" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "AssignInfoBulk", "AssignInfoBulk" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "AssignInfoBulk", "AssignInfoBulk" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "AssignInfoBulk", "AssignInfoBulk" );
             }
         }
     }
 
     public void Define_Salary_Head ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "DefineSalaryHead" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "DefineSalaryHead" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "DefineSalaryHead" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "DefineSalaryHead" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "DefineSalaryHead" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "DefineSalaryHead" );
             }
         }
     }
 
     public void Relate_Static_Dynamic_Heads ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "RelateStaticDynamicHeads" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "RelateStaticDynamicHeads" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "RelateStaticDynamicHeads" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "RelateStaticDynamicHeads" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "RelateStaticDynamicHeads" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "RelateStaticDynamicHeads" );
             }
         }
     }
 
     public void Define_Salary_Group ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "DefineSalaryGroup" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "DefineSalaryGroup" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "DefineSalaryGroup" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "DefineSalaryGroup" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "DefineSalaryGroup" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "DefineSalaryGroup" );
             }
         }
     }
 
     public void Assign_Salary_Head_to_Group ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "AssignSalaryHeadtoGroup" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "AssignSalaryHeadtoGroup" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "AssignSalaryHeadtoGroup" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "AssignSalaryHeadtoGroup" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "AssignSalaryHeadtoGroup" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "AssignSalaryHeadtoGroup" );
             }
         }
     }
 
     public void Assign_Salary_Group_to_Staff ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "AssignSalaryGrouptoStaff" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "AssignSalaryGrouptoStaff" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "AssignSalaryGrouptoStaff" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "AssignSalaryGrouptoStaff" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "AssignSalaryGrouptoStaff" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "AssignSalaryGrouptoStaff" );
             }
         }
     }
 
     public void Bulk_Salary_Head_Assign ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkSalaryHeadAssign" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkSalaryHeadAssign" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkSalaryHeadAssign" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "BulkSalaryHeadAssign" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkSalaryHeadAssign" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkSalaryHeadAssign" );
             }
         }
     }
 
     public void Bulk_Salary_Head_Entry ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkSalaryHeadEntry" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkSalaryHeadEntry" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkSalaryHeadEntry" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "BulkSalaryHeadEntry" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkSalaryHeadEntry" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkSalaryHeadEntry" );
             }
         }
     }
 
     public void Bulk_Head_Remark_Entry ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkHeadRemarkEntry" );
+            o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkHeadRemarkEntry" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "CreateSalaryStructure", "BulkHeadRemarkEntry" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "CreateSalaryStructure", "BulkHeadRemarkEntry" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkHeadRemarkEntry" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "CreateSalaryStructure", "BulkHeadRemarkEntry" );
             }
         }
     }
 
     public void Define_Income_Tax_Slab ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineIncomeTaxSlab" );
+            o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineIncomeTaxSlab" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineIncomeTaxSlab" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "TDSConfiguration", "DefineIncomeTaxSlab" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineIncomeTaxSlab" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineIncomeTaxSlab" );
             }
         }
     }
 
     public void Define_IT_Head_Groups ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineITHeadGroups" );
+            o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineITHeadGroups" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineITHeadGroups" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "TDSConfiguration", "DefineITHeadGroups" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineITHeadGroups" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineITHeadGroups" );
             }
         }
     }
 
     public void Define_IT_Head ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineITHead" );
+            o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineITHead" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineITHead" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "TDSConfiguration", "DefineITHead" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineITHead" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineITHead" );
             }
         }
     }
 
     public void Define_TDS_Deductee ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineTDSDeductee" );
+            o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineTDSDeductee" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "TDSConfiguration", "DefineTDSDeductee" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "TDSConfiguration", "DefineTDSDeductee" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineTDSDeductee" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "TDSConfiguration", "DefineTDSDeductee" );
             }
         }
     }
 
     public void Define_Pay_Scale ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefinePayScale" );
+            o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefinePayScale" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefinePayScale" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "PayScaleConfiguration", "DefinePayScale" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScale" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScale" );
             }
         }
     }
 
     public void Define_Pay_Scale_Amount ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScaleAmount" );
+            o1.openWebPage ( "Payroll_Master", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefinePayScaleAmount" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScaleAmount" );
+                o1.openWebPage ( "Payroll_Master", payroll_WebpageMenuPath, "PayScaleConfiguration", "DefinePayScaleAmount" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScaleAmount" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefinePayScaleAmount" );
             }
         }
     }
 
     public void Define_Grade_Pay ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefineGradePay" );
+            o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefineGradePay" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefineGradePay" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "PayScaleConfiguration", "DefineGradePay" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefineGradePay" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefineGradePay" );
             }
         }
     }
 
     public void Define_Fixation ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefineFixation" );
+            o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefineFixation" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "DefineFixation" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "PayScaleConfiguration", "DefineFixation" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefineFixation" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "DefineFixation" );
             }
         }
     }
 
     public void Assign_Pay_Scale_to_Staff ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "AssignPayScaletoStaff" );
+            o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "AssignPayScaletoStaff" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "PayScaleConfiguration", "AssignPayScaletoStaff" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "PayScaleConfiguration", "AssignPayScaletoStaff" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "AssignPayScaletoStaff" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "PayScaleConfiguration", "AssignPayScaletoStaff" );
             }
         }
     }
 
     public void Generate_Barcode ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "GenerateBarcode" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "GenerateBarcode" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "GenerateBarcode", "GenerateBarcode" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "GenerateBarcode", "GenerateBarcode" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "GenerateBarcode", "GenerateBarcode" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "GenerateBarcode", "GenerateBarcode" );
             }
         }
     }
 
     public void Insurance_Vendor ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "InsuranceVendor" );
+            o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "InsuranceVendor" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "InsuranceVendor" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "Insurance", "InsuranceVendor" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "InsuranceVendor" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "InsuranceVendor" );
             }
         }
     }
 
     public void Relate_policy_with_Employee ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "RelatepolicywithEmployee" );
+            o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "RelatepolicywithEmployee" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "RelatepolicywithEmployee" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "Insurance", "RelatepolicywithEmployee" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "RelatepolicywithEmployee" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "RelatepolicywithEmployee" );
             }
         }
     }
 
     public void Related_Policies_with_Month ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "RelatedPolicieswithMonth" );
+            o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "RelatedPolicieswithMonth" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "Insurance", "RelatedPolicieswithMonth" );
+                o1.openWebPage ( "Payroll_Master1", payroll_WebpageMenuPath, "Insurance", "RelatedPolicieswithMonth" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "RelatedPolicieswithMonth" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "Insurance", "RelatedPolicieswithMonth" );
             }
         }
     }
 
     public void Professional_Tax_slab ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab", "ProfessionalTaxSlab" );
+                o1.openWebPage ( "Payroll_Master", payroll_WebpageMenuPath, "ProfessionalTaxSlab", "ProfessionalTaxSlab" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab", "ProfessionalTaxSlab" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab", "ProfessionalTaxSlab" );
             }
         }
     }
 
     public void Fix_Advance_A_c ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Advance1", "FixAdvanceAc" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "FixAdvanceAc" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "FixAdvanceAc", "FixAdvanceAc" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "FixAdvanceAc", "FixAdvanceAc" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "FixAdvanceAc", "FixAdvanceAc" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "FixAdvanceAc", "FixAdvanceAc" );
             }
         }
     }
 
     public void Advance_entry ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Advance1", "Advanceentry" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "Advanceentry" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "Advanceentry", "Advanceentry" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "Advanceentry", "Advanceentry" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "Advanceentry", "Advanceentry" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "Advanceentry", "Advanceentry" );
             }
         }
     }
 
     public void Advance_Repayment ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Advance1", "AdvanceRepayment" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceRepayment" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceRepayment", "AdvanceRepayment" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "AdvanceRepayment", "AdvanceRepayment" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceRepayment", "AdvanceRepayment" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceRepayment", "AdvanceRepayment" );
             }
         }
     }
 
     public void Advance_Entry_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceEntryReport" );
+            o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceEntryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceEntryReport" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "AdvanceReport", "AdvanceEntryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceEntryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceEntryReport" );
             }
         }
     }
 
     public void Advance_Repayment_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceRepaymentReport" );
+            o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceRepaymentReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceRepaymentReport" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "AdvanceReport", "AdvanceRepaymentReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceRepaymentReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceRepaymentReport" );
             }
         }
     }
 
     public void Advance_Ledger_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceLedgerReport" );
+            o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceLedgerReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceReport", "AdvanceLedgerReport" );
+                o1.openWebPage ( "Advance1", payroll_WebpageMenuPath, "AdvanceReport", "AdvanceLedgerReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceLedgerReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Advance", "AdvanceReport", "AdvanceLedgerReport" );
             }
         }
     }
 
     public void Leave_LWP_Manual ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "LeaveLWPManual" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "LeaveLWPManual" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "LeaveLWPManual", "LeaveLWPManual" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "LeaveLWPManual", "LeaveLWPManual" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "LeaveLWPManual", "LeaveLWPManual" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "LeaveLWPManual", "LeaveLWPManual" );
             }
         }
     }
 
     public void Occasional_Allowance_Deduction ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "OccasionalAllowanceDeduction" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "OccasionalAllowanceDeduction" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "OccasionalAllowanceDeduction", "OccasionalAllowanceDeduction" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "OccasionalAllowanceDeduction", "OccasionalAllowanceDeduction" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "OccasionalAllowanceDeduction", "OccasionalAllowanceDeduction" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "OccasionalAllowanceDeduction", "OccasionalAllowanceDeduction" );
             }
         }
     }
 
     public void Salary_Generation ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "SalaryGeneration" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "SalaryGeneration" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "SalaryGeneration", "SalaryGeneration" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "SalaryGeneration", "SalaryGeneration" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "SalaryGeneration", "SalaryGeneration" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "SalaryGeneration", "SalaryGeneration" );
             }
         }
     }
 
     public void Bank_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "BankStatement" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BankStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BankStatement", "BankStatement" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "BankStatement", "BankStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "BankStatement", "BankStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "BankStatement", "BankStatement" );
             }
         }
     }
 
     public void Insurance_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "InsuranceStatement" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "InsuranceStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "InsuranceStatement", "InsuranceStatement" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "InsuranceStatement", "InsuranceStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "InsuranceStatement", "InsuranceStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "InsuranceStatement", "InsuranceStatement" );
             }
         }
     }
 
     public void Due_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "DueStatement" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DueStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DueStatement", "DueStatement" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "DueStatement", "DueStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "DueStatement", "DueStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "DueStatement", "DueStatement" );
             }
         }
     }
 
     public void IT_Head_Entry ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "ITHeadEntry" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "ITHeadEntry" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "ITHeadEntry", "ITHeadEntry" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "ITHeadEntry", "ITHeadEntry" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "ITHeadEntry", "ITHeadEntry" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "ITHeadEntry", "ITHeadEntry" );
             }
         }
     }
 
     public void TDS_Entry ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "TDSEntry" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "TDSEntry" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "TDSEntry", "TDSEntry" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "TDSEntry", "TDSEntry" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "TDSEntry", "TDSEntry" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "TDSEntry", "TDSEntry" );
             }
         }
     }
 
     public void Gratuity_Calculations ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "GratuityCalculations" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GratuityCalculations" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GratuityCalculations", "GratuityCalculations" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "GratuityCalculations", "GratuityCalculations" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "GratuityCalculations", "GratuityCalculations" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "GratuityCalculations", "GratuityCalculations" );
             }
         }
     }
 
     public void Bonus_Calculations ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "BonusCalculations" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BonusCalculations" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BonusCalculations", "BonusCalculations" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "BonusCalculations", "BonusCalculations" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "BonusCalculations", "BonusCalculations" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "BonusCalculations", "BonusCalculations" );
             }
         }
     }
 
     public void Auto_Increment ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "Increment", "AutoIncrement" );
+            o1.openWebPage ( "Salary_Structure1", "Increment", payroll_WebpageMenuPath, "AutoIncrement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "Increment", "AutoIncrement" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "Increment", "AutoIncrement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "Increment", "AutoIncrement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "Increment", "AutoIncrement" );
             }
         }
     }
 
     public void Increment_Rollback ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "Increment", "IncrementRollback" );
+            o1.openWebPage ( "Salary_Structure1", "Increment", payroll_WebpageMenuPath, "IncrementRollback" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "Increment", "IncrementRollback" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "Increment", "IncrementRollback" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "Increment", "IncrementRollback" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "Increment", "IncrementRollback" );
             }
         }
     }
 
     public void Staff_Salary_Structure ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "StaffSalaryStructure" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "StaffSalaryStructure" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "StaffSalaryStructure", "StaffSalaryStructure" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "StaffSalaryStructure", "StaffSalaryStructure" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "StaffSalaryStructure", "StaffSalaryStructure" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "StaffSalaryStructure", "StaffSalaryStructure" );
             }
         }
     }
 
     public void Generate_Salary_Status ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "GenerateSalaryStatus" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GenerateSalaryStatus" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GenerateSalaryStatus", "GenerateSalaryStatus" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "GenerateSalaryStatus", "GenerateSalaryStatus" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "GenerateSalaryStatus", "GenerateSalaryStatus" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "GenerateSalaryStatus", "GenerateSalaryStatus" );
             }
         }
     }
 
     public void Daily_Wages_Attendance ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Structure1", "DailyWagesAttendance" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DailyWagesAttendance" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DailyWagesAttendance", "DailyWagesAttendance" );
+                o1.openWebPage ( "Salary_Structure1", payroll_WebpageMenuPath, "DailyWagesAttendance", "DailyWagesAttendance" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "DailyWagesAttendance", "DailyWagesAttendance" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure", "DailyWagesAttendance", "DailyWagesAttendance" );
             }
         }
     }
 
     public void Bank_Statement_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "BankStatementReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "BankStatementReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "BankStatementReport", "BankStatementReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "BankStatementReport", "BankStatementReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "BankStatementReport", "BankStatementReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "BankStatementReport", "BankStatementReport" );
             }
         }
     }
 
     public void Salary_Sheet ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySheet" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySheet" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySheet", "SalarySheet" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "SalarySheet", "SalarySheet" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "SalarySheet", "SalarySheet" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "SalarySheet", "SalarySheet" );
             }
         }
     }
 
     public void Salary_Slip ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySlip" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySlip" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySlip", "SalarySlip" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "SalarySlip", "SalarySlip" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "SalarySlip", "SalarySlip" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "SalarySlip", "SalarySlip" );
             }
         }
     }
 
     public void Insurance_Statement_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "InsuranceStatementReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "InsuranceStatementReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "InsuranceStatementReport", "InsuranceStatementReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "InsuranceStatementReport", "InsuranceStatementReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "InsuranceStatementReport", "InsuranceStatementReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "InsuranceStatementReport", "InsuranceStatementReport" );
             }
         }
     }
 
     public void TDS_Entry_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "TDSEntryReport" );
+            o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "TDSEntryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "TDSEntryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "IncomeTax", "TDSEntryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "TDSEntryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "TDSEntryReport" );
             }
         }
     }
 
     public void Quarterly_Form_24Q ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "QuarterlyForm24Q" );
+            o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "QuarterlyForm24Q" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "QuarterlyForm24Q" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "IncomeTax", "QuarterlyForm24Q" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "QuarterlyForm24Q" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "QuarterlyForm24Q" );
             }
         }
     }
 
     public void TDS_24Q ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "TDS24Q" );
+            o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "TDS24Q" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "TDS24Q" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "IncomeTax", "TDS24Q" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "TDS24Q" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "TDS24Q" );
             }
         }
     }
 
     public void Gross_Form_16 ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "GrossForm16" );
+            o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "GrossForm16" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "GrossForm16" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "IncomeTax", "GrossForm16" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "GrossForm16" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "GrossForm16" );
             }
         }
     }
 
     public void Form_16 ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "Form16" );
+            o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "Form16" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "IncomeTax", "Form16" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "IncomeTax", "Form16" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "Form16" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "IncomeTax", "Form16" );
             }
         }
     }
 
     public void Employee_Type_wise_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "EmployeeTypewiseReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EmployeeTypewiseReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EmployeeTypewiseReport", "EmployeeTypewiseReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "EmployeeTypewiseReport", "EmployeeTypewiseReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "EmployeeTypewiseReport", "EmployeeTypewiseReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "EmployeeTypewiseReport", "EmployeeTypewiseReport" );
             }
         }
     }
 
     public void Estimated_Salary_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "EstimatedSalaryReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EstimatedSalaryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EstimatedSalaryReport", "EstimatedSalaryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "EstimatedSalaryReport", "EstimatedSalaryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "EstimatedSalaryReport", "EstimatedSalaryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "EstimatedSalaryReport", "EstimatedSalaryReport" );
             }
         }
     }
 
     public void Department_wise_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "DepartmentwiseReport" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "DepartmentwiseReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "DepartmentwiseReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "DepartmentwiseReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "DepartmentwiseReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "DepartmentwiseReport" );
             }
         }
     }
 
     public void Consolidated_Salary_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "ConsolidatedSalaryStatement" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "ConsolidatedSalaryStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "ConsolidatedSalaryStatement" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "ConsolidatedSalaryStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "ConsolidatedSalaryStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "ConsolidatedSalaryStatement" );
             }
         }
     }
 
     public void Gross_Salary_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "GrossSalaryReport" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "GrossSalaryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "GrossSalaryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "GrossSalaryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "GrossSalaryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "GrossSalaryReport" );
             }
         }
     }
 
     public void Month_Wise_Salary_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "MonthWiseSalaryReport" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "MonthWiseSalaryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "MonthWiseSalaryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "MonthWiseSalaryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "MonthWiseSalaryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "MonthWiseSalaryReport" );
             }
         }
     }
 
     public void Monthly_Summary_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "MonthlySummaryReport" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "MonthlySummaryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "MonthlySummaryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "MonthlySummaryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "MonthlySummaryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "MonthlySummaryReport" );
             }
         }
     }
 
     public void Head_Wise_Gross_Salary_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "HeadWiseGrossSalaryReport" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "HeadWiseGrossSalaryReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "HeadWiseGrossSalaryReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "HeadWiseGrossSalaryReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "HeadWiseGrossSalaryReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "HeadWiseGrossSalaryReport" );
             }
         }
     }
 
     public void Staff_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "StaffStatement" );
+            o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "StaffStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "MonthlySalaryReports", "StaffStatement" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "MonthlySalaryReports", "StaffStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "StaffStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "MonthlySalaryReports", "StaffStatement" );
             }
         }
     }
 
     public void Reconciliation_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "ReconciliationReport" );
+            o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "ReconciliationReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "ReconciliationReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "YearlyReports", "ReconciliationReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "ReconciliationReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "ReconciliationReport" );
             }
         }
     }
 
     public void Annual_Salary_Paid_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "AnnualSalaryPaidReport" );
+            o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "AnnualSalaryPaidReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "AnnualSalaryPaidReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "YearlyReports", "AnnualSalaryPaidReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "AnnualSalaryPaidReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "AnnualSalaryPaidReport" );
             }
         }
     }
 
     public void Salary_Statement_Employee_Wise ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "SalaryStatementEmployeeWise" );
+            o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "SalaryStatementEmployeeWise" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "SalaryStatementEmployeeWise" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "YearlyReports", "SalaryStatementEmployeeWise" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "SalaryStatementEmployeeWise" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "SalaryStatementEmployeeWise" );
             }
         }
     }
 
     public void Salary_Certificate_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithSubMenu ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "SalaryCertificateReport" );
+            o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "SalaryCertificateReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "YearlyReports", "SalaryCertificateReport" );
+                o1.openWebPage ( "Salary_Reports1", payroll_WebpageMenuPath, "YearlyReports", "SalaryCertificateReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "SalaryCertificateReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports", "YearlyReports", "SalaryCertificateReport" );
             }
         }
     }
 
     public void Employee_Statistics ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "EmployeeStatistics" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeStatistics" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeStatistics", "EmployeeStatistics" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "EmployeeStatistics", "EmployeeStatistics" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "EmployeeStatistics", "EmployeeStatistics" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "EmployeeStatistics", "EmployeeStatistics" );
             }
         }
     }
 
     public void ESI_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "ESIReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ESIReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "ESIReport", "ESIReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "ESIReport", "ESIReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "ESIReport", "ESIReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "ESIReport", "ESIReport" );
             }
         }
     }
 
     public void PF_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "PFReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "PFReport", "PFReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "PFReport", "PFReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "PFReport", "PFReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "PFReport", "PFReport" );
             }
         }
     }
 
     public void PF_Challan_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "PFChallanReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFChallanReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "PFChallanReport", "PFChallanReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "PFChallanReport", "PFChallanReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "PFChallanReport", "PFChallanReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "PFChallanReport", "PFChallanReport" );
             }
         }
     }
 
     public void Increment_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "IncrementReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "IncrementReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "IncrementReport", "IncrementReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "IncrementReport", "IncrementReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "IncrementReport", "IncrementReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "IncrementReport", "IncrementReport" );
             }
         }
     }
 
     public void GSLI_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "GSLIReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "GSLIReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "GSLIReport", "GSLIReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "GSLIReport", "GSLIReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "GSLIReport", "GSLIReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "GSLIReport", "GSLIReport" );
             }
         }
     }
 
     public void Gratuity_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "GratuityReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "GratuityReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "GratuityReport", "GratuityReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "GratuityReport", "GratuityReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "GratuityReport", "GratuityReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "GratuityReport", "GratuityReport" );
             }
         }
     }
 
     public void Salary_compare ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "Salarycompare" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "Salarycompare" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "Salarycompare", "Salarycompare" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "Salarycompare", "Salarycompare" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "Salarycompare", "Salarycompare" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "Salarycompare", "Salarycompare" );
             }
         }
     }
 
     public void Professional_Tax ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "ProfessionalTax" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ProfessionalTax" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "ProfessionalTax", "ProfessionalTax" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "ProfessionalTax", "ProfessionalTax" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "ProfessionalTax", "ProfessionalTax" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "ProfessionalTax", "ProfessionalTax" );
             }
         }
     }
 
     public void Super_Annunciation_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "SuperAnnunciationReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "SuperAnnunciationReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "SuperAnnunciationReport", "SuperAnnunciationReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "SuperAnnunciationReport", "SuperAnnunciationReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "SuperAnnunciationReport", "SuperAnnunciationReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "SuperAnnunciationReport", "SuperAnnunciationReport" );
             }
         }
     }
 
     public void MACP_List ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "MACPList" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "MACPList" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "MACPList", "MACPList" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "MACPList", "MACPList" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "MACPList", "MACPList" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "MACPList", "MACPList" );
             }
         }
     }
 
     public void Fixation_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "FixationReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "FixationReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "FixationReport", "FixationReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "FixationReport", "FixationReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "FixationReport", "FixationReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "FixationReport", "FixationReport" );
             }
         }
     }
 
     public void Date_Range_Retirement_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "DateRangeRetirementReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "DateRangeRetirementReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "DateRangeRetirementReport", "DateRangeRetirementReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "DateRangeRetirementReport", "DateRangeRetirementReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "DateRangeRetirementReport", "DateRangeRetirementReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "DateRangeRetirementReport", "DateRangeRetirementReport" );
             }
         }
     }
 
     public void Retirement_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "RetirementReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "RetirementReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "RetirementReport", "RetirementReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "RetirementReport", "RetirementReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "RetirementReport", "RetirementReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "RetirementReport", "RetirementReport" );
             }
         }
     }
 
     public void Pension_List ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "PensionList" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PensionList" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "PensionList", "PensionList" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "PensionList", "PensionList" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "PensionList", "PensionList" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "PensionList", "PensionList" );
             }
         }
     }
 
     public void Experience_Certificate_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "ExperienceCertificateReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ExperienceCertificateReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "ExperienceCertificateReport", "ExperienceCertificateReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "ExperienceCertificateReport", "ExperienceCertificateReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "ExperienceCertificateReport", "ExperienceCertificateReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "ExperienceCertificateReport", "ExperienceCertificateReport" );
             }
         }
     }
 
     public void Comparison_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "ComparisonReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ComparisonReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "ComparisonReport", "ComparisonReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "ComparisonReport", "ComparisonReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "ComparisonReport", "ComparisonReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "ComparisonReport", "ComparisonReport" );
             }
         }
     }
 
     public void Employee_Bio_Data ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "EmployeeBioData" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeBioData" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeBioData", "EmployeeBioData" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "EmployeeBioData", "EmployeeBioData" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "EmployeeBioData", "EmployeeBioData" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "EmployeeBioData", "EmployeeBioData" );
             }
         }
     }
 
     public void Service_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "ServiceReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ServiceReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "ServiceReport", "ServiceReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "ServiceReport", "ServiceReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "ServiceReport", "ServiceReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "ServiceReport", "ServiceReport" );
             }
         }
     }
 
     public void PF_Statement ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "PFStatement" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFStatement" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "PFStatement", "PFStatement" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "PFStatement", "PFStatement" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "PFStatement", "PFStatement" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "PFStatement", "PFStatement" );
             }
         }
     }
 
     public void PF_Annual_Report ( ) throws IOException {
         try {
-            o1.openWebpageWithoutSubMenu ( payroll_WebpageMenuPath, "Reports1", "PFAnnualReport" );
+            o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFAnnualReport" );
         } catch (Exception e) {
             try {
-                o1.newOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports1", "PFAnnualReport", "PFAnnualReport" );
+                o1.openWebPage ( "Reports1", payroll_WebpageMenuPath, "PFAnnualReport", "PFAnnualReport" );
             } catch (InterruptedException e1) {
-                o1.oldOpenMasterWebPage ( payroll_WebpageMenuPath, "Reports", "PFAnnualReport", "PFAnnualReport" );
+                o1.openWebPage ( payroll_WebpageMenuPath, "Reports", "PFAnnualReport", "PFAnnualReport" );
             }
         }
     }

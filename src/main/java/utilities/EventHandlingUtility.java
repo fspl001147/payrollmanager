@@ -1,5 +1,6 @@
 package utilities;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,9 +18,13 @@ public class EventHandlingUtility {
     }
 
     public void enterText (WebElement textfield, String text, int time) {
-        WebDriverWait wait = new WebDriverWait ( driver, 10 );
-        wait.until ( ExpectedConditions.visibilityOf ( textfield ) );
-        textfield.sendKeys ( text );
+        try {
+            WebDriverWait wait = new WebDriverWait ( driver, time );
+            wait.until ( ExpectedConditions.visibilityOf ( textfield ) );
+            textfield.sendKeys ( text );
+        } catch (NoSuchElementException e) {
+            System.out.println ( e.getMessage ( ) );
+        }
     }
 
     public void clearText (WebElement textfield) {

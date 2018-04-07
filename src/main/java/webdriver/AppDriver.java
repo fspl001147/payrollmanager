@@ -15,7 +15,7 @@ public abstract class AppDriver {
     public static WebDriver getCurrentDriver ( ) throws IOException {
         BrowserFactory bfactory = new BrowserFactory ( );
         if ( driver == null ) {
-            driver = bfactory.launchbrowser ( "chrome" );
+            driver = bfactory.launchbrowser ( "ie" );
         }
         return driver;
     }

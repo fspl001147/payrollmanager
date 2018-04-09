@@ -85,5 +85,4 @@ public class DefineStaffType extends GenericBaseClass {
     public String[] checkvalidityInStaffTypeTextBox (String stafftype) throws IOException, InterruptedException {
         return new SupportClasses ( ).checkValidityInTextBox ( file, "stafftypetextbox", "messageforvalidity", "messagebox", stafftype );
     }
-
 }

@@ -2,6 +2,7 @@ package pageobject;
 
 import frameworksupportmethods.GenericBaseClass;
 import frameworksupportmethods.ReadFile;
+import frameworksupportmethods.SupportClasses;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
 import utilities.OpenPayrollWebpage;
@@ -37,7 +38,7 @@ public class DefineStaffType extends GenericBaseClass {
         return new ReadFile ( ).getElement ( file, "stafftypeclass" );
     }
 
-    public WebElement getStaffTypeTextbox ( ) throws IOException {
+    public WebElement getStaffTypeTextbox ( ) throws IOException, InterruptedException {
         return new ReadFile ( ).getElement ( file, "stafftypetextbox" );
     }
 
@@ -77,34 +78,12 @@ public class DefineStaffType extends GenericBaseClass {
         return new ReadFile ( ).getElements ( file, "selectbutton" );
     }
 
-    public String getValidationMessage ( ) throws IOException {
-        return new ReadFile ( ).getElement ( file, "messagebox" ).getAttribute ( "innerHTML" );
+    public WebElement getValidationMessageBox ( ) throws IOException {
+        return new ReadFile ( ).getElement ( file, "messagebox" );
     }
 
-    public boolean checkAcceptabilityInStaffTypeTextBox (String stafftype) throws IOException, InterruptedException {
-        boolean status = false;
-        WebElement Z1 = new DefineStaffType ( ).getStaffTypeTextbox ( );
-        String enteredstafftype = Z1.getText ( );
-        System.out.println ( "Staff type Entered is  :" + enteredstafftype );
-        String displayedmessage = new DefineStaffType ( ).getValidationMessage ( );
-        String expectedmessage = new ReadFile ( ).readProperty ( file, "messageforvalidity" );
-        if ( enteredstafftype != null ) {
-            Thread.sleep ( 3000 );
-            if ( new ReadFile ( ).getElement ( file, "messagebox" ).isDisplayed ( ) ) {
-                if ( displayedmessage.equalsIgnoreCase ( expectedmessage ) ) {
-                    System.out.println ( "Entered Staff Type : '" + stafftype + "' is not aaccepted in the textbox " );
-                    status = true;
-                } else {
-                    System.out.println ( "Something Went Wrong as the message displayed is : " + displayedmessage );
-                }
-            } else {
-                System.out.println ( "Entered Staff Type : '" + stafftype + "' is allowed in the textbox " );
-            }
-        } else {
-            status = true;
-            System.out.println ( "Entered Staff Type : '" + stafftype + "' is not allowed in the textbox " );
-        }
-        return status;
+    public String[] checkvalidityInStaffTypeTextBox (String stafftype) throws IOException, InterruptedException {
+        return new SupportClasses ( ).checkValidityInTextBox ( file, "stafftypetextbox", "messageforvalidity", "messagebox", stafftype );
     }
 
 }

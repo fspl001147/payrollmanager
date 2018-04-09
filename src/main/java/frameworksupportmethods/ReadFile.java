@@ -33,40 +33,6 @@ public class ReadFile {
         String locator = readProperty ( file, element + "_type" );
         WebElement webelement = null;
 
-//        if ( locator.equalsIgnoreCase ( "id" ) ) {
-//            webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
-//        } else{
-//            if ( locator.equalsIgnoreCase ( "name" ) ) {
-//                webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
-//            }else{
-//                if ( locator.equalsIgnoreCase ( "xpath" ) ) {
-//                    webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
-//                } else {
-//                    if ( locator.equalsIgnoreCase ( "linktext" ) ) {
-//                        webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
-//                    }else{
-//                        if ( locator.equalsIgnoreCase ( "tagname" ) ) {
-//                            webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
-//                        } else{
-//                            if ( locator.equalsIgnoreCase ( "cssselector" ) ) {
-//                                webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
-//                            }else{
-//                                if ( locator.equalsIgnoreCase ( "classname" ) ) {
-//                                    webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
-//                                } else{
-//                                    System.out.println ( "SOMETHING WENT WRONG WITH LOCATORS... :-)" );
-//                                }
-//                            }
-//
-//                        }
-//
-//                    }
-//
-//                }
-//
-//            }
-//
-//        }
         switch (locator) {
             case "id":
                 webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );

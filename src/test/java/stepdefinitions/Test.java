@@ -3,7 +3,9 @@ package stepdefinitions;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import org.junit.rules.ErrorCollector;
+import org.openqa.selenium.Keys;
 import pageobject.DefineStaffType;
 import utilities.EventHandlingUtility;
 
@@ -25,17 +27,28 @@ public class Test {
 
     @And("^enter staff type as ([^\"]*) in staff type textbox$")
     public void enter_staff_type_in_staff_type_textbox (String stafftype) throws Throwable {
-        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), stafftype, 10 );
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), stafftype, 20 );
+        new DefineStaffType ( ).getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
         //event.click ( new DefineStaffType ().moveToDefineStaffTypeFrame (),10 );
     }
 
     @Then("^verify acceptability as per ([^\"]*) in staff type textbox$")
     public void verify_acceptability_in_staff_type_textbox (String stafftype) throws Throwable {
-        boolean status = new DefineStaffType ( ).checkAcceptabilityInStaffTypeTextBox ( stafftype );
-        if ( status = true ) {
-            System.out.println ( "scenario for acceptability is passed" );
-        } else {
-            System.out.println ( "scenario for acceptability is failed" );
+        String[] A = new DefineStaffType ( ).checkvalidityInStaffTypeTextBox ( stafftype );
+        String values = stafftype;
+        switch (values) {
+            case "staff":
+                Assert.assertEquals ( "false", A[0] );
+                System.out.println ( A[1] );
+                break;
+            case "123 staff type":
+                Assert.assertEquals ( "true", A[0] );
+                System.out.println ( A[1] );
+                break;
+            case "staff type 123":
+                Assert.assertEquals ( "false", A[0] );
+                System.out.println ( A[1] );
+                break;
         }
     }
 

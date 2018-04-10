@@ -21,7 +21,7 @@ public class Test {
         try {
             new DefineStaffType ( ).openDefineStaffTypeFrame ( );
         } catch (Throwable e) {
-            new ErrorCollector ( ).addError ( new Throwable ( "Something Went Wrong" ) );
+            new ErrorCollector ( ).addError ( new Throwable ( " Something Went Wrong" ) );
         }
     }
 
@@ -29,7 +29,6 @@ public class Test {
     public void enter_staff_type_in_staff_type_textbox (String stafftype) throws Throwable {
         event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), stafftype, 20 );
         new DefineStaffType ( ).getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
-        //event.click ( new DefineStaffType ().moveToDefineStaffTypeFrame (),10 );
     }
 
     @Then("^verify acceptability as per ([^\"]*) in staff type textbox$")
@@ -38,16 +37,13 @@ public class Test {
         String values = stafftype;
         switch (values) {
             case "staff":
-                Assert.assertEquals ( "false", A[0] );
-                System.out.println ( A[1] );
+                Assert.assertEquals ( A[1], "false", A[0] );
                 break;
             case "123 staff type":
-                Assert.assertEquals ( "true", A[0] );
-                System.out.println ( A[1] );
+                Assert.assertEquals ( A[1], "true", A[0] );
                 break;
             case "staff type 123":
-                Assert.assertEquals ( "false", A[0] );
-                System.out.println ( A[1] );
+                Assert.assertEquals ( A[1], "false", A[0] );
                 break;
         }
     }

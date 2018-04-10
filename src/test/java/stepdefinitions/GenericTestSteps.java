@@ -25,10 +25,8 @@ public class GenericTestSteps {
 
     @When("^user enter username and password$")
     public void userEnterUsernameAndPassword ( ) throws Throwable {
-        String login_id = readfile.readProperty ( fileConfig, "login" );
-        String password = readfile.readProperty ( fileConfig, "pwd" );
-        event.enterText ( uiMap.getUsername ( ), login_id, 10 );
-        event.enterText ( uiMap.getPassword ( ), password, 10 );
+        event.enterText ( uiMap.getUsername ( ), readfile.readProperty ( fileConfig, "login" ), 10 );
+        event.enterText ( uiMap.getPassword ( ), readfile.readProperty ( fileConfig, "pwd" ), 10 );
     }
 
     @When("^click sign in to open erp home page$")

@@ -3,90 +3,88 @@ package frameworksupportmethods;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
-import java.io.IOException;
-
 public class UIMap extends GenericBaseClass {
 
-    public WebElement getUsername ( ) throws IOException {
+    public WebElement getUsername ( ) throws Exception {
 
-        return new ReadFile ( ).getElement ( fileConfig, "username" );
+        return new ReadFile ( ).getElement ( fileConfig, "username", 2 );
     }
 
-    public WebElement getPassword ( ) throws IOException {
-        return new ReadFile ( ).getElement ( fileConfig, "password" );
+    public WebElement getPassword ( ) throws Exception {
+        return new ReadFile ( ).getElement ( fileConfig, "password", 2 );
     }
 
-    public WebElement getSignIn ( ) throws IOException {
-        return new ReadFile ( ).getElement ( fileConfig, "signin" );
+    public WebElement getSignIn ( ) throws Exception {
+        return new ReadFile ( ).getElement ( fileConfig, "signin", 2 );
     }
 
-    public WebElement getFeeManagerLogo ( ) throws IOException {
+    public WebElement getFeeManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardfeesmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardfeesmanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "feesmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "feesmanager", 2 );
         }
     }
 
-    public WebElement getPayrollManagerLogo ( ) throws IOException {
+    public WebElement getPayrollManagerLogo ( ) throws Exception {
 
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardpayrollmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardpayrollmanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "payrollmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "payrollmanager", 2 );
         }
     }
 
-    public WebElement getAttendanceManagerLogo ( ) throws IOException {
+    public WebElement getAttendanceManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardattendancemanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardattendancemanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "attendancemanager" );
-
-        }
-    }
-
-    public WebElement getStockManagerLogo ( ) throws IOException {
-        try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardstockmanager" );
-        } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "stockmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "attendancemanager", 2 );
 
         }
     }
 
-    public WebElement getAdmissionManagerLogo ( ) throws IOException {
+    public WebElement getStockManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardadmissionmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardstockmanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "admissionmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "stockmanager", 2 );
 
         }
     }
 
-    public WebElement getAccountsManagerLogo ( ) throws IOException {
+    public WebElement getAdmissionManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardaccountsmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardadmissionmanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "accountsmanager" );
+            return new ReadFile ( ).getElement ( modulePath, "admissionmanager", 2 );
 
         }
     }
 
-    public WebElement getUserManagerLogo ( ) throws IOException {
+    public WebElement getAccountsManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardusermanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardaccountsmanager", 2 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "usermanager" );
+            return new ReadFile ( ).getElement ( modulePath, "accountsmanager", 2 );
 
         }
     }
 
-    public WebElement getTimeTableManagerLogo ( ) throws IOException {
+    public WebElement getUserManagerLogo ( ) throws Exception {
         try {
-            return new ReadFile ( ).getElement ( modulePath, "dashboardtimetablemanager" );
+            return new ReadFile ( ).getElement ( modulePath, "dashboardusermanager", 3 );
         } catch (NoSuchElementException e) {
-            return new ReadFile ( ).getElement ( modulePath, "timetablemanager" );
+            return new ReadFile ( ).getElement ( modulePath, "usermanager", 3 );
+
+        }
+    }
+
+    public WebElement getTimeTableManagerLogo ( ) throws Exception {
+        try {
+            return new ReadFile ( ).getElement ( modulePath, "dashboardtimetablemanager", 3 );
+        } catch (NoSuchElementException e) {
+            return new ReadFile ( ).getElement ( modulePath, "timetablemanager", 3 );
 
         }
     }

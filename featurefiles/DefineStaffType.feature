@@ -1,7 +1,7 @@
 #Author <Rohit>
   #Date : <24-03-2018>
 
-Feature: Define Profession
+Feature: Define Staff Type
 
   Background: Steps to open payroll manager landing page
     Given for url

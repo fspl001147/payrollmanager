@@ -1,18 +1,40 @@
 package frameworksupportmethods;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.io.File;
-import java.io.IOException;
 
 import static webdriver.AppDriver.getCurrentDriver;
 
-public class SupportClasses {
+public class SupportClasses extends GenericBaseClass {
+    public static Logger log = Logger.getLogger ( SupportClasses.class.getName ( ) );
 
-    public String[] checkValidityInTextBox (File file, String elementfortextbox, String expectedmessage, String elementformessagebox, String enteredvalue) throws IOException, InterruptedException {
-        WebElement e1 = new ReadFile ( ).getElement ( file, elementformessagebox );
-        String acceptedvalueattextbox = new ReadFile ( ).getElement ( file, elementfortextbox ).getAttribute ( "value" );
+    /* public Logger getLogFiles() {
+         PropertyConfigurator.configure ( "Log4j.properties" );
+         Logger logger = Logger.getLogger ( SupportClasses.get );
+         //  Properties log4jProp = new Properties();
+         // log4jProp.setProperty("log4j.rootLogger", "WARN");
+         //  System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
+         // BasicConfigurator.configure();
+
+         return logger;
+
+     }*/
+    static {
+        init ( );
+    }
+
+    public static void init ( ) {
+        PropertyConfigurator.configure ( "Log4j.properties" );
+
+    }
+
+    public String[] checkValidityInTextBox (File file, String elementfortextbox, String expectedmessage, String elementformessagebox, String enteredvalue) throws Exception {
+        WebElement e1 = new ReadFile ( ).getElement ( file, elementformessagebox, 5 );
+        String acceptedvalueattextbox = new ReadFile ( ).getElement ( file, elementfortextbox, 5 ).getAttribute ( "value" );
         String message1 = new ReadFile ( ).readProperty ( file, expectedmessage );
 
         String textboxname = getCurrentDriver ( ).findElement ( By.xpath ( new ReadFile ( ).readProperty ( file, elementfortextbox ) + "/preceding-sibling::span" ) ).getAttribute ( "innerHTML" );
@@ -49,5 +71,4 @@ public class SupportClasses {
         A[1] = message;
         return A;
     }
-
 }

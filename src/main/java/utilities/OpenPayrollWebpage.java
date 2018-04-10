@@ -3,13 +3,11 @@ package utilities;
 import frameworksupportmethods.GenericBaseClass;
 import frameworksupportmethods.OpenMasterWebPage;
 
-import java.io.IOException;
-
 public class OpenPayrollWebpage extends GenericBaseClass {
 
     OpenMasterWebPage o1 = new OpenMasterWebPage ( );
 
-    public void DefineAcademicYear ( ) throws IOException {
+    public void DefineAcademicYear ( ) throws Exception {
         try {
             o1.openWebPage ( "Global_Master1", "DefineSession", payroll_WebpageMenuPath, "DefineAcademicYear" );
         } catch (Exception e) {
@@ -21,7 +19,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Financial_Year ( ) throws IOException {
+    public void Define_Financial_Year ( ) throws Exception {
         try {
             o1.openWebPage ( "Global_Master1", "DefineSession", payroll_WebpageMenuPath, "DefineFinancialYear" );
         } catch (Exception e) {
@@ -33,7 +31,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Profession ( ) throws IOException {
+    public void Define_Profession ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineProfession" );
         } catch (Exception e) {
@@ -45,7 +43,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Staff_Type ( ) throws IOException {
+    public void Define_Staff_Type ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaffType" );
         } catch (Exception e) {
@@ -57,7 +55,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Designation ( ) throws IOException {
+    public void Define_Designation ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDesignation" );
         } catch (Exception e) {
@@ -69,7 +67,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Department ( ) throws IOException {
+    public void Define_Department ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineDepartment" );
         } catch (Exception e) {
@@ -81,7 +79,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Staff ( ) throws IOException {
+    public void Define_Staff ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineStaff" );
         } catch (Exception e) {
@@ -93,7 +91,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Modify_Staff_in_Bulk ( ) throws IOException {
+    public void Modify_Staff_in_Bulk ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ModifyStaffinBulk" );
         } catch (Exception e) {
@@ -105,7 +103,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Rejoin_Staff ( ) throws IOException {
+    public void Rejoin_Staff ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "RejoinStaff" );
         } catch (Exception e) {
@@ -117,7 +115,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Reminder ( ) throws IOException {
+    public void Define_Reminder ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "DefineReminder" );
         } catch (Exception e) {
@@ -129,7 +127,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Assign_Transport_To_Staff ( ) throws IOException {
+    public void Assign_Transport_To_Staff ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "AssignTransportToStaff" );
         } catch (Exception e) {
@@ -141,7 +139,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Report_Setting ( ) throws IOException {
+    public void Report_Setting ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Global_Master1", "ReportSetting" );
         } catch (Exception e) {
@@ -153,7 +151,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Global_Settings ( ) throws IOException {
+    public void Define_Global_Settings ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "DefineGlobalSettings" );
         } catch (Exception e) {
@@ -165,7 +163,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Change_Academic ( ) throws IOException {
+    public void Change_Academic ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ChangeAcademic" );
         } catch (Exception e) {
@@ -178,7 +176,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
 //
     }
 
-    public void Report_Layout_Setting ( ) throws IOException {
+    public void Report_Layout_Setting ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "ReportLayoutSetting" );
         } catch (Exception e) {
@@ -190,7 +188,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Session_Transfer ( ) throws IOException {
+    public void Session_Transfer ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Master_Settings1", "SessionTransfer" );
         } catch (Exception e) {
@@ -202,7 +200,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Salary_Account ( ) throws IOException {
+    public void Define_Salary_Account ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryAccount" );
         } catch (Exception e) {
@@ -215,7 +213,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
 
     }
 
-    public void Define_Salary_Month ( ) throws IOException {
+    public void Define_Salary_Month ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "DefineSalaryMonth" );
         } catch (Exception e) {
@@ -227,7 +225,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Assign_Info_Bulk ( ) throws IOException {
+    public void Assign_Info_Bulk ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "AssignInfoBulk" );
         } catch (Exception e) {
@@ -239,7 +237,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Salary_Head ( ) throws IOException {
+    public void Define_Salary_Head ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "DefineSalaryHead" );
         } catch (Exception e) {
@@ -251,7 +249,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Relate_Static_Dynamic_Heads ( ) throws IOException {
+    public void Relate_Static_Dynamic_Heads ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "RelateStaticDynamicHeads" );
         } catch (Exception e) {
@@ -263,7 +261,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Salary_Group ( ) throws IOException {
+    public void Define_Salary_Group ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "DefineSalaryGroup" );
         } catch (Exception e) {
@@ -275,7 +273,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Assign_Salary_Head_to_Group ( ) throws IOException {
+    public void Assign_Salary_Head_to_Group ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "AssignSalaryHeadtoGroup" );
         } catch (Exception e) {
@@ -287,7 +285,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Assign_Salary_Group_to_Staff ( ) throws IOException {
+    public void Assign_Salary_Group_to_Staff ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "AssignSalaryGrouptoStaff" );
         } catch (Exception e) {
@@ -299,7 +297,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bulk_Salary_Head_Assign ( ) throws IOException {
+    public void Bulk_Salary_Head_Assign ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkSalaryHeadAssign" );
         } catch (Exception e) {
@@ -311,7 +309,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bulk_Salary_Head_Entry ( ) throws IOException {
+    public void Bulk_Salary_Head_Entry ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkSalaryHeadEntry" );
         } catch (Exception e) {
@@ -323,7 +321,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bulk_Head_Remark_Entry ( ) throws IOException {
+    public void Bulk_Head_Remark_Entry ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "CreateSalaryStructure", payroll_WebpageMenuPath, "BulkHeadRemarkEntry" );
         } catch (Exception e) {
@@ -335,7 +333,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Income_Tax_Slab ( ) throws IOException {
+    public void Define_Income_Tax_Slab ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineIncomeTaxSlab" );
         } catch (Exception e) {
@@ -347,7 +345,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_IT_Head_Groups ( ) throws IOException {
+    public void Define_IT_Head_Groups ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineITHeadGroups" );
         } catch (Exception e) {
@@ -359,7 +357,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_IT_Head ( ) throws IOException {
+    public void Define_IT_Head ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineITHead" );
         } catch (Exception e) {
@@ -371,7 +369,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_TDS_Deductee ( ) throws IOException {
+    public void Define_TDS_Deductee ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "TDSConfiguration", payroll_WebpageMenuPath, "DefineTDSDeductee" );
         } catch (Exception e) {
@@ -383,7 +381,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Pay_Scale ( ) throws IOException {
+    public void Define_Pay_Scale ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefinePayScale" );
         } catch (Exception e) {
@@ -395,7 +393,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Pay_Scale_Amount ( ) throws IOException {
+    public void Define_Pay_Scale_Amount ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefinePayScaleAmount" );
         } catch (Exception e) {
@@ -407,7 +405,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Grade_Pay ( ) throws IOException {
+    public void Define_Grade_Pay ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefineGradePay" );
         } catch (Exception e) {
@@ -419,7 +417,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Define_Fixation ( ) throws IOException {
+    public void Define_Fixation ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "DefineFixation" );
         } catch (Exception e) {
@@ -431,7 +429,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Assign_Pay_Scale_to_Staff ( ) throws IOException {
+    public void Assign_Pay_Scale_to_Staff ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "PayScaleConfiguration", payroll_WebpageMenuPath, "AssignPayScaletoStaff" );
         } catch (Exception e) {
@@ -443,7 +441,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Generate_Barcode ( ) throws IOException {
+    public void Generate_Barcode ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master1", "GenerateBarcode" );
         } catch (Exception e) {
@@ -455,7 +453,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Insurance_Vendor ( ) throws IOException {
+    public void Insurance_Vendor ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "InsuranceVendor" );
         } catch (Exception e) {
@@ -467,7 +465,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Relate_policy_with_Employee ( ) throws IOException {
+    public void Relate_policy_with_Employee ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "RelatepolicywithEmployee" );
         } catch (Exception e) {
@@ -479,7 +477,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Related_Policies_with_Month ( ) throws IOException {
+    public void Related_Policies_with_Month ( ) throws Exception {
         try {
             o1.openWebPage ( "Payroll_Master1", "Insurance", payroll_WebpageMenuPath, "RelatedPolicieswithMonth" );
         } catch (Exception e) {
@@ -491,7 +489,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Professional_Tax_slab ( ) throws IOException {
+    public void Professional_Tax_slab ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Payroll_Master", "ProfessionalTaxSlab" );
         } catch (Exception e) {
@@ -503,7 +501,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Fix_Advance_A_c ( ) throws IOException {
+    public void Fix_Advance_A_c ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "FixAdvanceAc" );
         } catch (Exception e) {
@@ -515,7 +513,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Advance_entry ( ) throws IOException {
+    public void Advance_entry ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "Advanceentry" );
         } catch (Exception e) {
@@ -527,7 +525,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Advance_Repayment ( ) throws IOException {
+    public void Advance_Repayment ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Advance1", "AdvanceRepayment" );
         } catch (Exception e) {
@@ -539,7 +537,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Advance_Entry_Report ( ) throws IOException {
+    public void Advance_Entry_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceEntryReport" );
         } catch (Exception e) {
@@ -551,7 +549,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Advance_Repayment_Report ( ) throws IOException {
+    public void Advance_Repayment_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceRepaymentReport" );
         } catch (Exception e) {
@@ -563,7 +561,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Advance_Ledger_Report ( ) throws IOException {
+    public void Advance_Ledger_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Advance1", "AdvanceReport", payroll_WebpageMenuPath, "AdvanceLedgerReport" );
         } catch (Exception e) {
@@ -575,7 +573,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Leave_LWP_Manual ( ) throws IOException {
+    public void Leave_LWP_Manual ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "LeaveLWPManual" );
         } catch (Exception e) {
@@ -587,7 +585,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Occasional_Allowance_Deduction ( ) throws IOException {
+    public void Occasional_Allowance_Deduction ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "OccasionalAllowanceDeduction" );
         } catch (Exception e) {
@@ -599,7 +597,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_Generation ( ) throws IOException {
+    public void Salary_Generation ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "SalaryGeneration" );
         } catch (Exception e) {
@@ -611,7 +609,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bank_Statement ( ) throws IOException {
+    public void Bank_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BankStatement" );
         } catch (Exception e) {
@@ -623,7 +621,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Insurance_Statement ( ) throws IOException {
+    public void Insurance_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "InsuranceStatement" );
         } catch (Exception e) {
@@ -635,7 +633,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Due_Statement ( ) throws IOException {
+    public void Due_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DueStatement" );
         } catch (Exception e) {
@@ -647,7 +645,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void IT_Head_Entry ( ) throws IOException {
+    public void IT_Head_Entry ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "ITHeadEntry" );
         } catch (Exception e) {
@@ -659,7 +657,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void TDS_Entry ( ) throws IOException {
+    public void TDS_Entry ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "TDSEntry" );
         } catch (Exception e) {
@@ -671,7 +669,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Gratuity_Calculations ( ) throws IOException {
+    public void Gratuity_Calculations ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GratuityCalculations" );
         } catch (Exception e) {
@@ -683,7 +681,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bonus_Calculations ( ) throws IOException {
+    public void Bonus_Calculations ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "BonusCalculations" );
         } catch (Exception e) {
@@ -695,7 +693,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Auto_Increment ( ) throws IOException {
+    public void Auto_Increment ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Structure1", "Increment", payroll_WebpageMenuPath, "AutoIncrement" );
         } catch (Exception e) {
@@ -707,7 +705,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Increment_Rollback ( ) throws IOException {
+    public void Increment_Rollback ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Structure1", "Increment", payroll_WebpageMenuPath, "IncrementRollback" );
         } catch (Exception e) {
@@ -719,7 +717,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Staff_Salary_Structure ( ) throws IOException {
+    public void Staff_Salary_Structure ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "StaffSalaryStructure" );
         } catch (Exception e) {
@@ -731,7 +729,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Generate_Salary_Status ( ) throws IOException {
+    public void Generate_Salary_Status ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "GenerateSalaryStatus" );
         } catch (Exception e) {
@@ -743,7 +741,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Daily_Wages_Attendance ( ) throws IOException {
+    public void Daily_Wages_Attendance ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Structure1", "DailyWagesAttendance" );
         } catch (Exception e) {
@@ -755,7 +753,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Bank_Statement_Report ( ) throws IOException {
+    public void Bank_Statement_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "BankStatementReport" );
         } catch (Exception e) {
@@ -767,7 +765,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_Sheet ( ) throws IOException {
+    public void Salary_Sheet ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySheet" );
         } catch (Exception e) {
@@ -779,7 +777,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_Slip ( ) throws IOException {
+    public void Salary_Slip ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "SalarySlip" );
         } catch (Exception e) {
@@ -791,7 +789,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Insurance_Statement_Report ( ) throws IOException {
+    public void Insurance_Statement_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "InsuranceStatementReport" );
         } catch (Exception e) {
@@ -803,7 +801,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void TDS_Entry_Report ( ) throws IOException {
+    public void TDS_Entry_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "TDSEntryReport" );
         } catch (Exception e) {
@@ -815,7 +813,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Quarterly_Form_24Q ( ) throws IOException {
+    public void Quarterly_Form_24Q ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "QuarterlyForm24Q" );
         } catch (Exception e) {
@@ -827,7 +825,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void TDS_24Q ( ) throws IOException {
+    public void TDS_24Q ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "TDS24Q" );
         } catch (Exception e) {
@@ -839,7 +837,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Gross_Form_16 ( ) throws IOException {
+    public void Gross_Form_16 ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "GrossForm16" );
         } catch (Exception e) {
@@ -851,7 +849,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Form_16 ( ) throws IOException {
+    public void Form_16 ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "IncomeTax", payroll_WebpageMenuPath, "Form16" );
         } catch (Exception e) {
@@ -863,7 +861,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Employee_Type_wise_Report ( ) throws IOException {
+    public void Employee_Type_wise_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EmployeeTypewiseReport" );
         } catch (Exception e) {
@@ -875,7 +873,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Estimated_Salary_Report ( ) throws IOException {
+    public void Estimated_Salary_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Salary_Reports1", "EstimatedSalaryReport" );
         } catch (Exception e) {
@@ -887,7 +885,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Department_wise_Report ( ) throws IOException {
+    public void Department_wise_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "DepartmentwiseReport" );
         } catch (Exception e) {
@@ -899,7 +897,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Consolidated_Salary_Statement ( ) throws IOException {
+    public void Consolidated_Salary_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "ConsolidatedSalaryStatement" );
         } catch (Exception e) {
@@ -911,7 +909,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Gross_Salary_Report ( ) throws IOException {
+    public void Gross_Salary_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "GrossSalaryReport" );
         } catch (Exception e) {
@@ -923,7 +921,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Month_Wise_Salary_Report ( ) throws IOException {
+    public void Month_Wise_Salary_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "MonthWiseSalaryReport" );
         } catch (Exception e) {
@@ -935,7 +933,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Monthly_Summary_Report ( ) throws IOException {
+    public void Monthly_Summary_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "MonthlySummaryReport" );
         } catch (Exception e) {
@@ -947,7 +945,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Head_Wise_Gross_Salary_Report ( ) throws IOException {
+    public void Head_Wise_Gross_Salary_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "HeadWiseGrossSalaryReport" );
         } catch (Exception e) {
@@ -959,7 +957,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Staff_Statement ( ) throws IOException {
+    public void Staff_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "MonthlySalaryReports", payroll_WebpageMenuPath, "StaffStatement" );
         } catch (Exception e) {
@@ -971,7 +969,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Reconciliation_Report ( ) throws IOException {
+    public void Reconciliation_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "ReconciliationReport" );
         } catch (Exception e) {
@@ -983,7 +981,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Annual_Salary_Paid_Report ( ) throws IOException {
+    public void Annual_Salary_Paid_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "AnnualSalaryPaidReport" );
         } catch (Exception e) {
@@ -995,7 +993,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_Statement_Employee_Wise ( ) throws IOException {
+    public void Salary_Statement_Employee_Wise ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "SalaryStatementEmployeeWise" );
         } catch (Exception e) {
@@ -1007,7 +1005,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_Certificate_Report ( ) throws IOException {
+    public void Salary_Certificate_Report ( ) throws Exception {
         try {
             o1.openWebPage ( "Salary_Reports1", "YearlyReports", payroll_WebpageMenuPath, "SalaryCertificateReport" );
         } catch (Exception e) {
@@ -1019,7 +1017,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Employee_Statistics ( ) throws IOException {
+    public void Employee_Statistics ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeStatistics" );
         } catch (Exception e) {
@@ -1031,7 +1029,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void ESI_Report ( ) throws IOException {
+    public void ESI_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ESIReport" );
         } catch (Exception e) {
@@ -1043,7 +1041,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void PF_Report ( ) throws IOException {
+    public void PF_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFReport" );
         } catch (Exception e) {
@@ -1055,7 +1053,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void PF_Challan_Report ( ) throws IOException {
+    public void PF_Challan_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFChallanReport" );
         } catch (Exception e) {
@@ -1067,7 +1065,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Increment_Report ( ) throws IOException {
+    public void Increment_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "IncrementReport" );
         } catch (Exception e) {
@@ -1079,7 +1077,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void GSLI_Report ( ) throws IOException {
+    public void GSLI_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "GSLIReport" );
         } catch (Exception e) {
@@ -1091,7 +1089,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Gratuity_Report ( ) throws IOException {
+    public void Gratuity_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "GratuityReport" );
         } catch (Exception e) {
@@ -1103,7 +1101,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Salary_compare ( ) throws IOException {
+    public void Salary_compare ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "Salarycompare" );
         } catch (Exception e) {
@@ -1115,7 +1113,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Professional_Tax ( ) throws IOException {
+    public void Professional_Tax ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ProfessionalTax" );
         } catch (Exception e) {
@@ -1127,7 +1125,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Super_Annunciation_Report ( ) throws IOException {
+    public void Super_Annunciation_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "SuperAnnunciationReport" );
         } catch (Exception e) {
@@ -1139,7 +1137,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void MACP_List ( ) throws IOException {
+    public void MACP_List ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "MACPList" );
         } catch (Exception e) {
@@ -1151,7 +1149,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Fixation_Report ( ) throws IOException {
+    public void Fixation_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "FixationReport" );
         } catch (Exception e) {
@@ -1163,7 +1161,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Date_Range_Retirement_Report ( ) throws IOException {
+    public void Date_Range_Retirement_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "DateRangeRetirementReport" );
         } catch (Exception e) {
@@ -1175,7 +1173,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Retirement_Report ( ) throws IOException {
+    public void Retirement_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "RetirementReport" );
         } catch (Exception e) {
@@ -1187,7 +1185,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Pension_List ( ) throws IOException {
+    public void Pension_List ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PensionList" );
         } catch (Exception e) {
@@ -1199,7 +1197,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Experience_Certificate_Report ( ) throws IOException {
+    public void Experience_Certificate_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ExperienceCertificateReport" );
         } catch (Exception e) {
@@ -1211,7 +1209,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Comparison_Report ( ) throws IOException {
+    public void Comparison_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ComparisonReport" );
         } catch (Exception e) {
@@ -1223,7 +1221,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Employee_Bio_Data ( ) throws IOException {
+    public void Employee_Bio_Data ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "EmployeeBioData" );
         } catch (Exception e) {
@@ -1235,7 +1233,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void Service_Report ( ) throws IOException {
+    public void Service_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "ServiceReport" );
         } catch (Exception e) {
@@ -1247,7 +1245,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void PF_Statement ( ) throws IOException {
+    public void PF_Statement ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFStatement" );
         } catch (Exception e) {
@@ -1259,7 +1257,7 @@ public class OpenPayrollWebpage extends GenericBaseClass {
         }
     }
 
-    public void PF_Annual_Report ( ) throws IOException {
+    public void PF_Annual_Report ( ) throws Exception {
         try {
             o1.openWebPage ( payroll_WebpageMenuPath, "Reports1", "PFAnnualReport" );
         } catch (Exception e) {

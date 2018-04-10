@@ -12,21 +12,20 @@ import utilities.EventHandlingUtility;
 import webdriver.AppDriver;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 import static webdriver.AppDriver.driver;
 
 public class OpenMasterWebPage extends GenericBaseClass {
 
-    public void openWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws IOException {
+    public void openWebPage (File WebPage_path, String mainmenu_name, String submenu_name, String webpage_name) throws Exception {
 
         /*Storing webpage and submenu value in a variable*/
         String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
         String web_page_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
 
         /*Open main menu*/
-        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ), 20 );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
 
         /*Storing names of all webpages in a web element list*/
         List <WebElement> master_dd = AppDriver.getCurrentDriver ( ).findElements ( By.xpath ( "//ul//li/a" ) );
@@ -53,11 +52,11 @@ public class OpenMasterWebPage extends GenericBaseClass {
         }
     }
 
-    public void openWebPage (String mainmenu_name, File WebPage_path, String submenu_name, String webpage_name) throws IOException, InterruptedException {
+    public void openWebPage (String mainmenu_name, File WebPage_path, String submenu_name, String webpage_name) throws Exception, InterruptedException {
         String sub_menu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
         String web_page_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
         List <WebElement> submenu_dd = AppDriver.getCurrentDriver ( ).findElements ( By.xpath ( "//ul[@class ='sub-menu' ]//li/a" ) );
-        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ), 20 );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
         for ( WebElement element : submenu_dd ) {
             String pagevalue = element.getAttribute ( "innerHTML" );
             if ( pagevalue.contains ( "<p>" ) ) {
@@ -86,7 +85,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
 
         // Click to Main Menu (Global Master)
-        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ), 20 );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
 
         // Click to Sub Menu (Define Session)
         String xpathforsession = "//ul//li/a/p[text()='" + submenu_name_value + "']";
@@ -101,7 +100,7 @@ public class OpenMasterWebPage extends GenericBaseClass {
 
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
         // Click to Main Menu (Global Master)
-        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name ), 20 );
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
         // Click to Web Page (Define Staff Type)
         String xpathfordesiredwebpage = "//ul//li/a[text()='" + webpage_name_value + "']";
         new EventHandlingUtility ( ).click ( AppDriver.getCurrentDriver ( ).findElement ( By.xpath ( xpathfordesiredwebpage ) ), 20 );

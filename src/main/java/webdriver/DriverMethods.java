@@ -24,6 +24,10 @@ public class DriverMethods extends GenericBaseClass {
         getCurrentDriver ( ).manage ( ).timeouts ( ).implicitlyWait ( time, TimeUnit.SECONDS );
     }
 
+    //public void waitExplicitly(WebElement element, int time) throws IOException{
+//    WebDriverWait wait = new WebDriverWait ( driver, 5 );
+//    wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By. ));
+//}
     public void switchToParentWindow ( ) throws IOException {
         getCurrentDriver ( ).switchTo ( ).defaultContent ( );
     }

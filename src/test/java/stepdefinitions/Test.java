@@ -64,7 +64,8 @@ public class Test {
 
     @And("^enter staff type as ([^\"]*) in staff type textbox for length limit$")
     public void enterStaffTypeAsStaffTypeForLengthLimitInStaffTypeTextboxForLengthLimit (String stafftype) throws Throwable {
-
+        event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), stafftype, 20 );
+        new DefineStaffType ( ).getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
     }
 
     @Then("^verify acceptability as per ([^\"]*) in staff type textbox for length limit$")

@@ -48,4 +48,25 @@ public class SupportClasses extends GenericBaseClass {
         A[1] = message;
         return A;
     }
+
+    public String[] checkLengthOfTextBox (File file, String elementfortextbox, String expectedmessage, String elementformessagebox, String enteredvalue) throws Exception {
+        String A[] = new String[2];
+        String status;
+        String message;
+        String acceptedvalueattextbox = new ReadFile ( ).getElement ( file, elementfortextbox, 5 ).getAttribute ( "value" );
+        WebElement e1 = new ReadFile ( ).getElement ( file, elementformessagebox, 5 );
+        String message1 = new ReadFile ( ).readProperty ( file, expectedmessage );
+        String textboxname = getCurrentDriver ( ).findElement ( By.xpath ( new ReadFile ( ).readProperty ( file, elementfortextbox ) + "/preceding-sibling::span" ) ).getAttribute ( "innerHTML" );
+        if ( acceptedvalueattextbox.equals ( null ) ) {
+            message = enteredvalue + " is not acceptable in " + textboxname + " textbox";
+            status = "true";
+        } else {
+            if ( acceptedvalueattextbox.equals ( enteredvalue ) ) {
+
+            } else {
+
+            }
+        }
+        return A;
+    }
 }

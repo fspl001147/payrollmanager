@@ -98,4 +98,8 @@ public class DefineStaffType extends GenericBaseClass {
     public String[] checkvalidityInStaffTypeTextBox (String stafftype) throws Exception {
         return new SupportClasses ( ).checkValidityInTextBox ( file, "stafftypetextbox", "messageforvalidity", "messagebox", stafftype );
     }
+
+    public String[] checkLengthLimitInStaffTypeTextBox (String stafftype) throws Exception {
+        return new SupportClasses ( ).checkLengthOfTextBox ( file, "stafftypetextbox", "messageforlength", "messagebox", stafftype );
+    }
 }

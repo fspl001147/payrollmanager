@@ -10,13 +10,38 @@ Feature: Define Staff Type
     Then user click payroll manager logo
 
     # Acceptability in staff type textbox
+  @Component @Scenario1
   Scenario Outline: Acceptability in staff type textbox
     When user open define staff type page
-    And enter staff type as <StaffType> in staff type textbox
-    Then verify acceptability as per <StaffType> in staff type textbox
+    And enter staff type as <Staff Type For Acceptability> in staff type textbox for acceptability
+    Then verify acceptability as per <Staff Type For Acceptability> in staff type textbox for acceptability
 
     Examples:
-      | StaffType      |
-      | staff          |
-      | 123 staff type |
-      | staff type 123 |
+      | Staff Type For Acceptability |
+      | staff                        |
+      | 123456                       |
+      | 123 staff type               |
+      | staff type 123               |
+      | staff 123 type               |
+      | @#!-                         |
+      | @ staff type                 |
+      | staff type @                 |
+      | staff @ type                 |
+      | -staff type                  |
+      | /staff type                  |
+      | staff type/                  |
+      | staff type-                  |
+      | staff / type                 |
+      | staff - type                 |
+
+    #Length Limit of Staff Type Textbox
+  @Componenet @Scenario2
+  Scenario Outline: Length limit of staff type textbox
+    When user open define staff type page
+    And enter staff type as <Staff Type For Length Limit> in staff type textbox for length limit
+    Then verify acceptability as per <Staff Type For Length Limit> in staff type textbox for length limit
+
+    Examples:
+      | Staff Type For Length Limit                         |
+      | stafftypeestafftypeestafftypeestafftypeestafftypee  |
+      | stafftypeestafftypeestafftypeestafftypeestafftypeee |

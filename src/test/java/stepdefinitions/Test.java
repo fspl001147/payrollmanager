@@ -25,27 +25,51 @@ public class Test {
         }
     }
 
-    @And("^enter staff type as ([^\"]*) in staff type textbox$")
-    public void enter_staff_type_in_staff_type_textbox (String stafftype) throws Throwable {
+    @And("^enter staff type as ([^\"]*) in staff type textbox for acceptability$")
+    public void enterStaffTypeInStaffTypeTextboxForAcceptability (String stafftype) throws Throwable {
         event.enterText ( new DefineStaffType ( ).getStaffTypeTextbox ( ), stafftype, 20 );
         new DefineStaffType ( ).getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
     }
 
-    @Then("^verify acceptability as per ([^\"]*) in staff type textbox$")
-    public void verify_acceptability_in_staff_type_textbox (String stafftype) throws Throwable {
+    @Then("^verify acceptability as per ([^\"]*) in staff type textbox for acceptability$")
+    public void verifyAcceptabilityInStaffTypeTextboxForAcceptability (String stafftype) throws Throwable {
         String[] A = new DefineStaffType ( ).checkvalidityInStaffTypeTextBox ( stafftype );
         String values = stafftype;
         switch (values) {
             case "staff":
                 Assert.assertEquals ( A[1], "false", A[0] );
                 break;
-            case "123 staff type":
-                Assert.assertEquals ( A[1], "true", A[0] );
-                break;
             case "staff type 123":
                 Assert.assertEquals ( A[1], "false", A[0] );
                 break;
+            case "staff 123 type":
+                Assert.assertEquals ( A[1], "false", A[0] );
+                break;
+            case "staff type/":
+                Assert.assertEquals ( A[1], "false", A[0] );
+                break;
+            case "staff type-":
+                Assert.assertEquals ( A[1], "false", A[0] );
+                break;
+            case "staff / type":
+                Assert.assertEquals ( A[1], "false", A[0] );
+                break;
+            case "staff - type":
+                Assert.assertEquals ( A[1], "false", A[0] );
+                break;
+            default:
+                Assert.assertEquals ( A[1], "true", A[0] );
         }
+    }
+
+    @And("^enter staff type as ([^\"]*) in staff type textbox for length limit$")
+    public void enterStaffTypeAsStaffTypeForLengthLimitInStaffTypeTextboxForLengthLimit (String stafftype) throws Throwable {
+
+    }
+
+    @Then("^verify acceptability as per ([^\"]*) in staff type textbox for length limit$")
+    public void verifyAcceptabilityAsPerStaffTypeForLengthLimitInStaffTypeTextboxForLengthLimit (String stafftype) throws Throwable {
+
     }
 
 }

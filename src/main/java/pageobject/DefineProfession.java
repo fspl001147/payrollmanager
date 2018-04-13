@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class DefineProfession extends GenericBaseClass {
-    private File file = new File ( "configuration\\pageproperties\\DefineProfession.properties" );
+    private File file = new File ( "configuration\\pageproperties\\DefineProfession.feature.properties" );
 
     public void openDefineProfessionFrame ( ) throws Exception {
         try {

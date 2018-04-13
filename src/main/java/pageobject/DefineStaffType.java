@@ -13,8 +13,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class DefineStaffType extends GenericBaseClass {
-    private File file = new File ( "configuration\\pageproperties\\DefineStaffType.properties" );
     DriverMethods dm = new DriverMethods ( );
+    private File file = new File ( "configuration\\pageproperties\\DefineStaffType.properties" );
 
     public void openDefineStaffType ( ) throws Exception {
         new OpenPayrollWebpage ( ).Define_Staff_Type ( );
@@ -34,10 +34,6 @@ public class DefineStaffType extends GenericBaseClass {
             System.out.println ( e.getMessage ( ) );
             e.printStackTrace ( );
         }
-    }
-
-    public WebElement moveToDefineStaffTypeFrame ( ) throws Exception {
-        return new ReadFile ( ).getElement ( file, "stafftypeclass", 5 );
     }
 
     public WebElement getStaffTypeTextbox ( ) throws Exception {
@@ -90,16 +86,61 @@ public class DefineStaffType extends GenericBaseClass {
         return new ReadFile ( ).getElements ( file, "selectbutton", 5 );
     }
 
-    public WebElement getValidationMessageBox ( ) throws Exception {
+    public WebElement getDefineStaffTypeMessageBox ( ) throws Exception {
         //   dm.waitExplicitly (new ReadFile ( ).getElement ( file, "messagebox" ),5  );
         return new ReadFile ( ).getElement ( file, "messagebox", 5 );
     }
 
     public String[] checkvalidityInStaffTypeTextBox (String stafftype) throws Exception {
-        return new SupportClasses ( ).checkValidityInTextBox ( file, "stafftypetextbox", "messageforvalidity", "messagebox", stafftype );
+        return new SupportClasses ( ).checkValidityInTextBox ( file, new DefineStaffType ( ).getStaffTypeTextbox ( ), "messageforvalidity", new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ), "Define Staff Type", stafftype );
     }
 
     public String[] checkLengthLimitInStaffTypeTextBox (String stafftype) throws Exception {
-        return new SupportClasses ( ).checkLengthOfTextBox ( file, "stafftypetextbox", "messageforlength", "messagebox", stafftype );
+        return new SupportClasses ( ).checkLengthOfTextBox ( file, new DefineStaffType ( ).getStaffTypeTextbox ( ), "messageforlength", new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ), "Define Staff Type", stafftype, 50 );
+    }
+
+    public boolean [] getPageStatusAtPageLoad (String elementname) {
+        boolean [] s = new boolean[7];
+        try {
+            s[0] = new DefineStaffType ( ).getStaffTypeTextbox ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[1] = new DefineStaffType ( ).getShowOnEcareCheckBox ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[2] = new DefineStaffType ( ).getIsHourlyPaidCheckBox ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[3] = new DefineStaffType ( ).getSaveButton ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[4] = new DefineStaffType ( ).getViewButton ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[5] = new DefineStaffType ( ).getPrintButton ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[6] = new DefineStaffType ( ).getCancelButton ( ).isEnabled ( );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        try {
+            s[7] = new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
+        } catch (Exception e) {
+            e.printStackTrace ( );
+        }
+        return s;
     }
 }

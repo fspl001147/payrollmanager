@@ -87,14 +87,14 @@ public class OpenMasterWebPage extends GenericBaseClass {
         String submenu_name_value = new ReadFile ( ).readProperty ( WebPage_path, submenu_name );
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
 
-        // Click to Main Menu (Global Master)
+//         Click to Main Menu (Global Master)
         new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
 
-        // Click to Sub Menu (Define Session)
+//         Click to Sub Menu (Define Session)
         String xpathforsession = "//ul//li/a/p[text()='" + submenu_name_value + "']";
         new EventHandlingUtility ( ).click ( driver.findElement ( By.xpath ( xpathforsession ) ), 20 );
 
-        // Click to Web Page (Define Academic Year)
+//         Click to Web Page (Define Academic Year)
         String xpathfordesiredwebpage = "//ul//li/a/p[text()='" + webpage_name_value + "']";
         new EventHandlingUtility ( ).click ( driver.findElement ( By.xpath ( xpathfordesiredwebpage ) ), 20 );
     }
@@ -102,13 +102,9 @@ public class OpenMasterWebPage extends GenericBaseClass {
     public void openWebPage (File WebPage_path, String mainmenu_name, String webpage_name) throws Exception {
 
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
-        // Click to Main Menu (Global Master)
-//      try{
-          new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
-//      }  catch(NoSuchElementException nsee){
-//          throw nsee;
-//      }
-        // Click to Web Page (Define Staff Type)
+//         Click to Main Menu (Global Master)
+        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
+//         Click to Web Page (Define Staff Type)
         String xpathfordesiredwebpage = "//ul//li/a[text()='" + webpage_name_value + "']";
         new EventHandlingUtility ( ).click ( AppDriver.getCurrentDriver ( ).findElement ( By.xpath ( xpathfordesiredwebpage ) ), 20 );
 

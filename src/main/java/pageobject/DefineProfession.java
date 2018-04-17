@@ -36,6 +36,9 @@ public class DefineProfession extends GenericBaseClass {
         dm.waitImplicitly ( 3 );
         return new ReadFile ( ).getElement ( file, "professiontextbox", 3 );
     }
+    public WebElement getProfessionMessageBox() throws Exception {
+        return new ReadFile ( ).getElement ( file, "messagebox", 5 );
+    }
 
     public WebElement getSaveButton ( ) throws Exception {
         return new ReadFile ( ).getElement ( file, "savebutton", 3 );

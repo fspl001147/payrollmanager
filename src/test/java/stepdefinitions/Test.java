@@ -13,6 +13,7 @@ import org.junit.rules.ErrorCollector;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageobject.DefineProfession;
 import pageobject.DefineStaff;
 import pageobject.DefineStaffType;
 import utilities.EventHandlingUtility;
@@ -26,6 +27,7 @@ import static webdriver.AppDriver.driver;
 public class Test {
     protected EventHandlingUtility event = new EventHandlingUtility ( );
     private DefineStaffType d1 = new DefineStaffType ( );
+    private DefineProfession d2 = new DefineProfession ();
     private File file = new File ( "configuration\\pageproperties\\DefineStaffType.properties" );
     private File file1 = new File ( "target\\cucumber_html_report\\index.html" );
 
@@ -120,23 +122,33 @@ public class Test {
         new Test ( ).verifyStatusOfMenuItemsDisplayedOverDefineStaffTypePageAtPageLoad ( table );
     }
 
+/*CASES FOR DEFINE PROFESSION*/
 
     @When("^user open define profession page$")
     public void userOpenDefineProfessionPage ( ) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException ( );
+        d2.openDefineProfessionFrame ();
     }
 
     @Then("^verify status of menu items displayed over define profession page at page load$")
-    public void verifyStatusOfMenuItemsDisplayedOverDefineProfessionPageAtPageLoad ( ) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException ( );
+    public void verifyStatusOfMenuItemsDisplayedOverDefineProfessionPageAtPageLoad ( DataTable table) throws Throwable {
+        List <List <String>> data = table.raw ( );
+        boolean profession_textbox = d2.getProfessionTextBox ().isEnabled ( );
+        Assert.assertEquals ( data.get ( 0 ).get ( 0 ).toString ( ) + " is not active", data.get ( 0 ).get ( 1 ).toString ( ), String.valueOf ( profession_textbox ) );
+        boolean save_button = d2.getSaveButton ( ).isEnabled ( );
+        Assert.assertEquals ( data.get ( 3 ).get ( 0 ).toString ( ) + " is not active", data.get ( 3 ).get ( 1 ).toString ( ), String.valueOf ( save_button ) );
+        boolean view_button = d2.getViewButton ( ).isEnabled ( );
+        Assert.assertEquals ( data.get ( 4 ).get ( 0 ).toString ( ) + " is not active", data.get ( 4 ).get ( 1 ).toString ( ), String.valueOf ( view_button ) );
+        boolean print_button = d2.getPrintButton ( ).isEnabled ( );
+        Assert.assertEquals ( data.get ( 5 ).get ( 0 ).toString ( ) + " is not active", data.get ( 5 ).get ( 1 ).toString ( ), String.valueOf ( print_button ) );
+        boolean cancel_button = d2.getCancelButton ( ).isEnabled ( );
+        Assert.assertEquals ( data.get ( 6 ).get ( 0 ).toString ( ) + " is not active", data.get ( 6 ).get ( 1 ).toString ( ), String.valueOf ( cancel_button ) );
+        boolean message_box = d2.getProfessionMessageBox ().getAttribute ( "style" ).contains ( "inline" );
+        Assert.assertEquals ( data.get ( 7 ).get ( 0 ).toString ( ) + " is active", data.get ( 7 ).get ( 1 ).toString ( ), String.valueOf ( message_box ) );
     }
 
     @And("^enter profession as <Profession Entered For Acceptability> in profession textbox for acceptability$")
     public void enterProfessionAsProfessionEnteredForAcceptabilityInProfessionTextboxForAcceptability ( ) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException ( );
+
     }
 
     @Then("^verify <status> as acceptability and <Displayed Message> as message for <Profession Entered For Acceptability> in profession text box$")

@@ -97,49 +97,49 @@ public class DefineStaffType extends GenericBaseClass {
     public String[] checkLengthLimitInStaffTypeTextBox (String stafftype) throws Exception {
         return new SupportClasses ( ).checkLengthOfTextBox ( file, new DefineStaffType ( ).getStaffTypeTextbox ( ), "messageforlength", new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ), "Define Staff Type", stafftype, 50 );
     }
-
-    public boolean [] getPageStatusAtPageLoad (String elementname) {
-        boolean [] s = new boolean[7];
-        try {
-            s[0] = new DefineStaffType ( ).getStaffTypeTextbox ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[1] = new DefineStaffType ( ).getShowOnEcareCheckBox ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[2] = new DefineStaffType ( ).getIsHourlyPaidCheckBox ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[3] = new DefineStaffType ( ).getSaveButton ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[4] = new DefineStaffType ( ).getViewButton ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[5] = new DefineStaffType ( ).getPrintButton ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[6] = new DefineStaffType ( ).getCancelButton ( ).isEnabled ( );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        try {
-            s[7] = new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
-        } catch (Exception e) {
-            e.printStackTrace ( );
-        }
-        return s;
-    }
+//
+//    public boolean [] getPageStatusAtPageLoad (String elementname) {
+//        boolean [] s = new boolean[7];
+//        try {
+//            s[0] = new DefineStaffType ( ).getStaffTypeTextbox ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[1] = new DefineStaffType ( ).getShowOnEcareCheckBox ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[2] = new DefineStaffType ( ).getIsHourlyPaidCheckBox ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[3] = new DefineStaffType ( ).getSaveButton ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[4] = new DefineStaffType ( ).getViewButton ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[5] = new DefineStaffType ( ).getPrintButton ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[6] = new DefineStaffType ( ).getCancelButton ( ).isEnabled ( );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        try {
+//            s[7] = new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
+//        } catch (Exception e) {
+//            e.printStackTrace ( );
+//        }
+//        return s;
+//    }
 }

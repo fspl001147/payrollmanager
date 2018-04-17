@@ -61,9 +61,7 @@ Feature: Define Profession
     And enter profession as "profession" and rest input fields over define profession and
     And hit on cancel over define profession page
     Then verify status of menu items displayed over define profession page on hit of cancel
-      | staff type textbox     | true  |
-      | show on ecare checkbox | true  |
-      | is hourly paid         | true  |
+      | profession textbox     | true  |
       | save Button            | true  |
       | view Button            | true  |
       | print Button           | true  |

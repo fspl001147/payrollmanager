@@ -6,13 +6,13 @@ import cucumber.api.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(ExtendedCucumber.class)
-@ExtendedCucumberOptions(
-        jsonReport = "target/cucumber.json",
-        detailedReport = true,
-        detailedAggregatedReport = true,
-        toPDF = true,
-        outputFolder = "target/ExtendedReport"
-)
+//@ExtendedCucumberOptions(
+//        jsonReport = "target/cucumber.json",
+//        detailedReport = true,
+//        detailedAggregatedReport = true,
+//        toPDF = true,
+//        outputFolder = "target/ExtendedReport"
+//)
 @CucumberOptions(
         features = {"featurefiles/DefineStaffType.feature"}
         ,glue= {"stepdefinitions"}
@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         ,plugin= {"pretty","html:target/cucumber_html_report",
         "json:target/cucumber.json",
         "junit:target/cucumber.xml"}
-        //,tags= {"@Scenario4"}
+        ,tags= {"@Scenario1"}
 )
 public class DefineStaffTypeRunner {
 }

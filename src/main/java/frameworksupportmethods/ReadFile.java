@@ -38,31 +38,31 @@ public class ReadFile {
         WebDriverWait wait = new WebDriverWait ( driver, time );
         switch (locator) {
             case "id":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.id ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.id ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
                 break;
             case "xpath":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.xpath ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.xpath ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
                 break;
             case "name":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.name ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.name ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
                 break;
             case "linktext":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.linkText ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.linkText ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
                 break;
             case "tagname":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.tagName ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.tagName ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
                 break;
             case "cssselector":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.cssSelector ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.cssSelector ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
                 break;
             case "classname":
-                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.className ( value ) ) );
+//                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.className ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
                 break;
         }

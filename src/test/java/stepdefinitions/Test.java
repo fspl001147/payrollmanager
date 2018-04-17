@@ -3,11 +3,16 @@ package stepdefinitions;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import frameworksupportmethods.ReadFile;
 import org.junit.Assert;
+import org.junit.ComparisonFailure;
 import org.junit.rules.ErrorCollector;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobject.DefineStaff;
 import pageobject.DefineStaffType;
 import utilities.EventHandlingUtility;
@@ -15,6 +20,8 @@ import utilities.EventHandlingUtility;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import static webdriver.AppDriver.driver;
 
 public class Test {
     protected EventHandlingUtility event = new EventHandlingUtility ( );
@@ -24,11 +31,7 @@ public class Test {
 
     @When("^user open define staff type page$")
     public void userOpenDefineStaffTypePage ( ) throws Throwable {
-        try {
-            d1.openDefineStaffTypeFrame ( );
-        } catch (Throwable e) {
-            new ErrorCollector ( ).addError ( new Throwable ( " Something Went Wrong" ) );
-        }
+        d1.openDefineStaffTypeFrame ( );
     }
 
     @Then("^verify status of menu items displayed over define staff type page at page load$")
@@ -54,7 +57,7 @@ public class Test {
 
     @And("^enter staff type as ([^\"]*) in staff type textbox for acceptability$")
     public void enterStaffTypeInStaffTypeTextboxForAcceptability (String stafftype) throws Throwable {
-        event.enterText ( d1.getStaffTypeTextbox ( ), stafftype, 20 );
+        event.enterText ( d1.getStaffTypeTextbox ( ), stafftype, 2 );
         d1.getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
     }
 
@@ -67,7 +70,7 @@ public class Test {
 
     @And("^enter staff type as ([^\"]*) in staff type textbox for length limit$")
     public void enterStaffTypeAsStaffTypeEnteredForLengthLimitInStaffTypeTextboxForLengthLimit (String stafftype) throws Throwable {
-        event.enterText ( d1.getStaffTypeTextbox ( ), stafftype, 20 );
+        event.enterText ( d1.getStaffTypeTextbox ( ), stafftype, 2 );
         d1.getStaffTypeTextbox ( ).sendKeys ( Keys.TAB );
     }
 
@@ -78,6 +81,28 @@ public class Test {
         Assert.assertEquals ( A[1], message, A[2] );
     }
 
+//    @And("^click on staff type textbox$")
+//    public void clickOnStaffTypeTextbox ( ) throws Throwable {
+//      event.click ( d1.getStaffTypeTextbox (),2 );
+//    }
+//
+//    @And("^click outside the textbox$")
+//    public void clickOutsideTheTextbox ( ) throws Throwable {
+//        d1.getStaffTypeTextbox ().sendKeys ( Keys.TAB );
+//    }
+//
+//    @Then("^a pop up message should be displayed for mendatory field correspoding to define staff type textbox$")
+//    public void aPopUpMessageShouldBeDisplayedForMendatoryFieldCorrespodingToDefineStaffTypeTextbox ( ) throws Throwable {
+//        String message = d1.getDefineStaffTypeMessageBox ().getAttribute ( "innerHTML" );
+//     Assert.assertFalse ( "Message is displayed : '"+message +"' " ,d1.getDefineStaffTypeMessageBox ().getAttribute ( "style" ).contains ( "inline" ) );
+//     Assert.assertEquals ( new ReadFile ().readProperty ( file, "messageformandatory" ),message);
+//    }
+//
+//    @But("^record should not be saved in define staff type table$")
+//    public void recordShouldNotBeSavedInDefineStaffTypeTable ( ) throws Throwable {
+//
+//    }
+
     @And("^enter staff type as \"([^\"]*)\" and rest input fields over define staff type and$")
     public void enterStaffTypeAsAndRestInputFieldsOverDefineStaffTypeAnd (String arg0) throws Throwable {
         event.enterText ( d1.getStaffTypeTextbox ( ), arg0, 2 );
@@ -85,8 +110,8 @@ public class Test {
         event.click ( d1.getShowOnEcareCheckBox ( ), 2 );
     }
 
-    @And("^hit on cancel$")
-    public void hitOnCancel ( ) throws Throwable {
+    @And("^hit on cancel over define staff type page$")
+    public void hitOnCancelOverDefineStaffTypePage ( ) throws Throwable {
         event.click ( d1.getCancelButton ( ), 3 );
     }
 
@@ -95,4 +120,58 @@ public class Test {
         new Test ( ).verifyStatusOfMenuItemsDisplayedOverDefineStaffTypePageAtPageLoad ( table );
     }
 
+
+    @When("^user open define profession page$")
+    public void userOpenDefineProfessionPage ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @Then("^verify status of menu items displayed over define profession page at page load$")
+    public void verifyStatusOfMenuItemsDisplayedOverDefineProfessionPageAtPageLoad ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @And("^enter profession as <Profession Entered For Acceptability> in profession textbox for acceptability$")
+    public void enterProfessionAsProfessionEnteredForAcceptabilityInProfessionTextboxForAcceptability ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @Then("^verify <status> as acceptability and <Displayed Message> as message for <Profession Entered For Acceptability> in profession text box$")
+    public void verifyStatusAsAcceptabilityAndDisplayedMessageAsMessageForProfessionEnteredForAcceptabilityInProfessionTextBox ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @And("^enter profession as <Profession Entered For Length Limit> in profession textbox for length limit$")
+    public void enterProfessionAsProfessionEnteredForLengthLimitInProfessionTextboxForLengthLimit ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @Then("^verify <status> as length limit and <Displayed Message> as message for <Profession Entered For Length Limit> in profession textbox$")
+    public void verifyStatusAsLengthLimitAndDisplayedMessageAsMessageForProfessionEnteredForLengthLimitInProfessionTextbox ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @And("^enter profession as \"([^\"]*)\" and rest input fields over define profession and$")
+    public void enterProfessionAsAndRestInputFieldsOverDefineProfessionAnd (String arg0) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @And("^hit on cancel over define profession page$")
+    public void hitOnCancelOverDefineProfessionPage ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
+
+    @Then("^verify status of menu items displayed over define profession page on hit of cancel$")
+    public void verifyStatusOfMenuItemsDisplayedOverDefineProfessionPageOnHitOfCancel ( ) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        throw new PendingException ( );
+    }
 }

@@ -1,6 +1,7 @@
 package utilities;
 
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -32,8 +33,9 @@ public class EventHandlingUtility {
     }
 
     public void click (WebElement element, int time) {
-        WebDriverWait wait = new WebDriverWait ( driver, 10 );
+        WebDriverWait wait = new WebDriverWait ( driver, time );
         wait.until ( ExpectedConditions.visibilityOf ( element ) );
         element.click ( );
+
     }
 }

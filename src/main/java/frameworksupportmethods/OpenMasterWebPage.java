@@ -7,14 +7,17 @@ package frameworksupportmethods;
 
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
 import webdriver.AppDriver;
 
 import java.io.File;
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 import static webdriver.AppDriver.driver;
+import static webdriver.AppDriver.getCurrentDriver;
 
 public class OpenMasterWebPage extends GenericBaseClass {
 
@@ -100,7 +103,11 @@ public class OpenMasterWebPage extends GenericBaseClass {
 
         String webpage_name_value = new ReadFile ( ).readProperty ( WebPage_path, webpage_name );
         // Click to Main Menu (Global Master)
-        new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
+//      try{
+          new EventHandlingUtility ( ).click ( new ReadFile ( ).getElement ( mainMenuPath, mainmenu_name, 5 ), 20 );
+//      }  catch(NoSuchElementException nsee){
+//          throw nsee;
+//      }
         // Click to Web Page (Define Staff Type)
         String xpathfordesiredwebpage = "//ul//li/a[text()='" + webpage_name_value + "']";
         new EventHandlingUtility ( ).click ( AppDriver.getCurrentDriver ( ).findElement ( By.xpath ( xpathfordesiredwebpage ) ), 20 );

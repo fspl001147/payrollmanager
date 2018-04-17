@@ -5,19 +5,27 @@ import frameworksupportmethods.ReadFile;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
 import utilities.OpenPayrollWebpage;
+import webdriver.DriverMethods;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
 public class DefineProfession extends GenericBaseClass {
+    DriverMethods dm = new DriverMethods ( );
     private File file = new File ( "configuration\\pageproperties\\DefineProfession.feature.properties" );
+
+    public void openDefineProfession ( ) throws Exception {
+        new OpenPayrollWebpage ( ).Define_Profession ( );
+    }
 
     public void openDefineProfessionFrame ( ) throws Exception {
         try {
-            new OpenPayrollWebpage ( ).Define_Profession ( );
-            new EventHandlingUtility ( ).switchToFrame ( new ReadFile ( ).getElement ( file, "frame", 3 ), 20 );
-
+    new DefineProfession ().openDefineProfession ();
+            WebElement element = new ReadFile ().getElement ( file, "frame",3 );
+            if(element.isDisplayed ()){
+                new EventHandlingUtility ( ).switchToFrame ( element, 10 );
+            }
         } catch (IOException e) {
             System.out.println ( e.getMessage ( ) );
             e.printStackTrace ( );
@@ -25,6 +33,7 @@ public class DefineProfession extends GenericBaseClass {
     }
 
     public WebElement getProfessionTextBox ( ) throws Exception {
+        dm.waitImplicitly ( 3 );
         return new ReadFile ( ).getElement ( file, "professiontextbox", 3 );
     }
 

@@ -27,8 +27,6 @@ public class DefineStaffType extends GenericBaseClass {
             boolean status = element.isDisplayed ( );
             if ( status = true ) {
                 new EventHandlingUtility ( ).switchToFrame ( element, 10 );
-            } else {
-                System.out.println ( "Frame Not Found" );
             }
         } catch (IOException e) {
             System.out.println ( e.getMessage ( ) );
@@ -37,7 +35,7 @@ public class DefineStaffType extends GenericBaseClass {
     }
 
     public WebElement getStaffTypeTextbox ( ) throws Exception {
-        //dm.waitExplicitly (  new ReadFile ( ).getElement ( file, "stafftypetextbox" ),5 );
+        dm.waitImplicitly (  3 );
         return new ReadFile ( ).getElement ( file, "stafftypetextbox", 5 );
     }
 
@@ -52,6 +50,7 @@ public class DefineStaffType extends GenericBaseClass {
     }
 
     public WebElement getSaveButton ( ) throws Exception {
+        dm.waitImplicitly ( 3 );
         // dm.waitExplicitly (new ReadFile ( ).getElement ( file, "savebutton" ),5  );
         return new ReadFile ( ).getElement ( file, "savebutton", 5 );
     }

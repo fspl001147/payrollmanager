@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(ExtendedCucumber.class)
 @CucumberOptions(
-        features = {"featurefiles/DefineStaffType.feature"}
+        features = {"featurefiles/DefineProfession.feature"}
         ,glue= {"stepdefinitions"}
         ,monochrome=true
         ,plugin= {"pretty","html:target/cucumber_html_report",

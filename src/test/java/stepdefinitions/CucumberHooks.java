@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import frameworksupportmethods.CaptureScreenshot;
@@ -16,10 +17,10 @@ public class CucumberHooks {
     DriverMethods dm = new DriverMethods ( );
     CaptureScreenshot cs = new CaptureScreenshot ( );
 
-  /*  @Before
+   @Before
     public void getScenario (Scenario sc) {
         scenario = sc.getSourceTagNames ( );
-    }*/
+    }
 
     @Before
     public void launchBrowser ( ) throws IOException {
@@ -35,7 +36,7 @@ public class CucumberHooks {
     @After
     public void closeBrowser ( ) throws IOException {
         dm.waitImplicitly ( 1000 );
-        cs.catureScreenshot ( );
+        cs.catureScreenshot ( (Scenario) scenario );
         driver.close ( );
         driver.quit ( );
         driver = null;

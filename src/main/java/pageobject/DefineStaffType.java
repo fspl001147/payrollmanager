@@ -1,8 +1,6 @@
 package pageobject;
 
-import frameworksupportmethods.GenericBaseClass;
-import frameworksupportmethods.ReadFile;
-import frameworksupportmethods.SupportClasses;
+import frameworksupportmethods.*;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
 import utilities.OpenPayrollWebpage;
@@ -10,6 +8,10 @@ import webdriver.DriverMethods;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Array;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class DefineStaffType extends GenericBaseClass {
@@ -35,7 +37,7 @@ public class DefineStaffType extends GenericBaseClass {
     }
 
     public WebElement getStaffTypeTextbox ( ) throws Exception {
-        dm.waitImplicitly (  3 );
+        dm.waitImplicitly ( 3 );
         return new ReadFile ( ).getElement ( file, "stafftypetextbox", 5 );
     }
 
@@ -70,6 +72,10 @@ public class DefineStaffType extends GenericBaseClass {
         return new ReadFile ( ).getElement ( file, "viewbutton", 5 );
     }
 
+    public boolean getViewGrid()throws Exception{
+        return new ReadFile ().getElement ( file, "gridatview",3 ).isEnabled ();
+    }
+
     public WebElement getDeleteButton ( ) throws Exception {
         //  dm.waitExplicitly (new ReadFile ( ).getElement ( file, "deletebutton" ),5  );
         return new ReadFile ( ).getElement ( file, "deletebutton", 5 );
@@ -97,49 +103,23 @@ public class DefineStaffType extends GenericBaseClass {
     public String[] checkLengthLimitInStaffTypeTextBox (String stafftype) throws Exception {
         return new SupportClasses ( ).checkLengthOfTextBox ( file, new DefineStaffType ( ).getStaffTypeTextbox ( ), "messageforlength", new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ), "Define Staff Type", stafftype, 50 );
     }
+
+    public boolean checkIsEmptyViewGridData() throws Exception {
+        return new ReadFile().getElement ( file, "emptyrow" ,2).isDisplayed ();
+    }
+
+//    public void getAllSavedRecord ( ) throws IOException, SQLException {
+//        ArrayList <String> A = new ArrayList <> ( );
+//        ExecuteScript eS = new ExecuteScript ( );
+//        ResultSet rs = eS.execScript ( new ReadFile ( ).readProperty ( file, "query1" ) );
+//        while (rs.next ( )) {
+//            A.add ( String.valueOf ( rs.getInt ( 1 ) ) );
+//            A.add ( rs.getString ( 2 ) );
+//            A.add ( String.valueOf ( rs.getInt ( 4 ) ) );
+//            A.add ( String.valueOf ( rs.getInt ( 5 ) ) );
+//            A.add ( String.valueOf ( rs.getInt ( 6 ) ) );
+//        }
 //
-//    public boolean [] getPageStatusAtPageLoad (String elementname) {
-//        boolean [] s = new boolean[7];
-//        try {
-//            s[0] = new DefineStaffType ( ).getStaffTypeTextbox ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[1] = new DefineStaffType ( ).getShowOnEcareCheckBox ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[2] = new DefineStaffType ( ).getIsHourlyPaidCheckBox ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[3] = new DefineStaffType ( ).getSaveButton ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[4] = new DefineStaffType ( ).getViewButton ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[5] = new DefineStaffType ( ).getPrintButton ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[6] = new DefineStaffType ( ).getCancelButton ( ).isEnabled ( );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        try {
-//            s[7] = new DefineStaffType ( ).getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
-//        } catch (Exception e) {
-//            e.printStackTrace ( );
-//        }
-//        return s;
 //    }
+
 }

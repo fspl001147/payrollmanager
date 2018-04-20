@@ -2,9 +2,12 @@ package pageobject;
 
 import frameworksupportmethods.GenericBaseClass;
 import frameworksupportmethods.ReadFile;
+import frameworksupportmethods.SupportClasses;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import utilities.EventHandlingUtility;
 import utilities.OpenPayrollWebpage;
+import webdriver.AppDriver;
 import webdriver.DriverMethods;
 
 import java.io.File;
@@ -12,8 +15,9 @@ import java.io.IOException;
 import java.util.List;
 
 public class DefineProfession extends GenericBaseClass {
+
     DriverMethods dm = new DriverMethods ( );
-    private File file = new File ( "configuration\\pageproperties\\DefineProfession.feature.properties" );
+    private File file = new File ( "configuration\\pageproperties\\DefineProfession.properties" );
 
     public void openDefineProfession ( ) throws Exception {
         new OpenPayrollWebpage ( ).Define_Profession ( );
@@ -21,9 +25,9 @@ public class DefineProfession extends GenericBaseClass {
 
     public void openDefineProfessionFrame ( ) throws Exception {
         try {
-    new DefineProfession ().openDefineProfession ();
-            WebElement element = new ReadFile ().getElement ( file, "frame",3 );
-            if(element.isDisplayed ()){
+            new DefineProfession ( ).openDefineProfession ( );
+            WebElement element = new ReadFile ( ).getElement ( file, "frame", 3 );
+            if ( element.isDisplayed ( ) ) {
                 new EventHandlingUtility ( ).switchToFrame ( element, 10 );
             }
         } catch (IOException e) {
@@ -36,7 +40,8 @@ public class DefineProfession extends GenericBaseClass {
         dm.waitImplicitly ( 3 );
         return new ReadFile ( ).getElement ( file, "professiontextbox", 3 );
     }
-    public WebElement getProfessionMessageBox() throws Exception {
+
+    public WebElement getProfessionMessageBox ( ) throws Exception {
         return new ReadFile ( ).getElement ( file, "messagebox", 5 );
     }
 
@@ -69,7 +74,16 @@ public class DefineProfession extends GenericBaseClass {
         return new ReadFile ( ).getElements ( file, "selectbutton", 3 );
     }
 
-    public WebElement getSavedProfessionValue (int i) throws IOException {
-        return getSelectButton ( ).get ( i - 1 );
+//    public WebElement getSavedProfessionValue (int i) throws IOException {
+//        return getSelectButton ( ).get ( i - 1 );
+//    }
+
+    public String[] checkvalidityInProfessionTextBox (String profession) throws Exception {
+        return new SupportClasses ( ).checkValidityInTextBox ( file, new DefineProfession ( ).getProfessionTextBox ( ), "messageforvalidity", new DefineProfession ( ).getProfessionMessageBox ( ), "Define Profession", profession );
     }
+
+    public String[] checkLengthLimitInProfessionTextBox (String profession) throws Exception {
+        return new SupportClasses ( ).checkLengthOfTextBox ( file, new DefineProfession ( ).getProfessionTextBox ( ), "messageforlength", new DefineProfession ( ).getProfessionTextBox ( ), "Define Profession", profession, 50 );
+    }
+
 }

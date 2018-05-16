@@ -1,11 +1,10 @@
 package stepdefinitions;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import frameworksupportmethods.GenericBaseClass;
 import frameworksupportmethods.ReadFile;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
@@ -14,15 +13,16 @@ import pageobject.DefineStaffType;
 import utilities.EventHandlingUtility;
 
 import java.io.File;
-import java.sql.ResultSet;
 import java.util.List;
 
-public class Test {
-    protected EventHandlingUtility event = new EventHandlingUtility ( );
+public class Test extends GenericBaseClass {
+    private EventHandlingUtility event = new EventHandlingUtility ( );
     private DefineStaffType d1 = new DefineStaffType ( );
     private DefineProfession d2 = new DefineProfession ( );
     private File file = new File ( "configuration\\pageproperties\\DefineStaffType.properties" );
-    private File file1 = new File ( "target\\cucumber_html_report\\index.html" );
+
+
+    //  private File file1 = new File ( "target\\cucumber_html_report\\index.html" );
 
     /*CASES FOR DEFINE Staff Type*/
 
@@ -50,7 +50,7 @@ public class Test {
         boolean cancel_button = d1.getCancelButton ( ).isEnabled ( );
         Assert.assertEquals ( data.get ( 6 ).get ( 0 ).toString ( ) + " is not active", data.get ( 6 ).get ( 1 ).toString ( ), String.valueOf ( cancel_button ) );
         boolean message_box = d1.getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
-        Assert.assertEquals ( data.get ( 7 ).get ( 0 ).toString ( ) + " is active", data.get ( 7 ).get ( 1 ).toString ( ), String.valueOf ( message_box ) );
+        Assert.assertEquals ( data.get ( 7 ).get ( 0 ).toString ( ) + " is active", data.get ( 7 ).get ( 0 ).toString ( ), String.valueOf ( message_box ) );
     }
 
     /* Scenario : 2    * Acceptability in staff type textbox    */
@@ -146,10 +146,10 @@ public class Test {
 //
 //    }
 
-/*CASES FOR DEFINE PROFESSION*/
+    /*CASES FOR DEFINE PROFESSION*/
 
     /* Scenario 1
-         * Verify define profession page status status while page load */
+     * Verify define profession page status status while page load */
     @When("^user open define profession page$")
     public void userOpenDefineProfessionPage ( ) throws Throwable {
         d2.openDefineProfessionFrame ( );
@@ -173,7 +173,7 @@ public class Test {
     }
 
     /* Scenario 2
-      * Acceptability in profession textbox */
+     * Acceptability in profession textbox */
     @And("^enter profession as ([^\"]*) in profession textbox for acceptability$")
     public void enterProfessionForAcceptabilityInProfessionTextboxForAcceptability (String profession) throws Throwable {
         event.enterText ( d2.getProfessionTextBox ( ), profession, 2 );
@@ -202,10 +202,10 @@ public class Test {
         Assert.assertEquals ( A[1], message, A[2] );
     }
     /* Scenario 4
-        * Is Mendatory criteria over Define Profession Page */
+     * Is Mendatory criteria over Define Profession Page */
 
     /* Scenario 5
-      * Action on cancel */
+     * Action on cancel */
     @And("^enter profession as \"([^\"]*)\" and rest input fields over define profession$")
     public void enterProfessionAsAndRestInputFieldsOverDefineProfessionAnd (String arg0) throws Throwable {
         event.enterText ( d2.getProfessionTextBox ( ), arg0, 2 );

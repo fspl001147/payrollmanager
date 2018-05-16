@@ -27,7 +27,7 @@ public class DriverMethods extends GenericBaseClass {
         getCurrentDriver ( ).manage ( ).timeouts ( ).implicitlyWait ( time, TimeUnit.SECONDS );
     }
 
-//    public void waitExplicitly(WebElement element, int time) throws IOException{
+    //    public void waitExplicitly(WebElement element, int time) throws IOException{
 //    WebDriverWait wait = new WebDriverWait ( driver, 5 );
 //    wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By. ));
 //}
@@ -36,12 +36,12 @@ public class DriverMethods extends GenericBaseClass {
     }
 
     public void switchToWindow (String wintitle) throws IOException {
-       Set <String> winhandles = getCurrentDriver ().getWindowHandles ();
-        for ( String winhandle: winhandles ) {
-          getCurrentDriver ().switchTo ().window ( winhandle );
-          if ( getCurrentDriver ().getTitle ().equalsIgnoreCase ( wintitle ) ){
-              break;
-          }
+        Set <String> winhandles = getCurrentDriver ( ).getWindowHandles ( );
+        for ( String winhandle : winhandles ) {
+            getCurrentDriver ( ).switchTo ( ).window ( winhandle );
+            if ( getCurrentDriver ( ).getTitle ( ).equalsIgnoreCase ( wintitle ) ) {
+                break;
+            }
         }
 //        ArrayList <String> windows = new ArrayList <String> ( getCurrentDriver ( ).getWindowHandles ( ) );
 //        for ( int i = 0; i <= 8; i++ ) {

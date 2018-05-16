@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 public class UIMap extends GenericBaseClass {
 
     public WebElement getUsername ( ) throws Exception {
-
         return new ReadFile ( ).getElement ( fileConfig, "username", 2 );
     }
 

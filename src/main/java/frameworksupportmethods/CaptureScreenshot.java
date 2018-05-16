@@ -1,5 +1,6 @@
 package frameworksupportmethods;
 
+import com.cucumber.listener.Reporter;
 import cucumber.api.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -15,15 +16,15 @@ import static webdriver.AppDriver.getCurrentDriver;
 
 public class CaptureScreenshot extends GenericBaseClass {
     public void catureScreenshot (Scenario scenario) throws IOException {
-
-        String timestamp = getTimeStamp ( );
-//        System.out.println ( "timestam: " + timestamp );
         try {
             if ( scenario.isFailed ( ) ) {
                 File F = ((TakesScreenshot) getCurrentDriver ( )).getScreenshotAs ( OutputType.FILE );
-                File dest = new File ( new ReadFile ( ).readProperty ( fileConfig, "screenshotpath" ) + File.separator + scenario.getSourceTagNames ( ) + File.separator + getTimeStamp ( ) + ".png" );
+                File dest = new File ( new ReadFile ( ).readProperty ( fileConfig, "screenshotpath" ) + File.separator + scenario.getSourceTagNames ( ) + File.separator + scenario.getName ()+ ".jpg" );
+                File dest1 = new File ( "output/"+scenario.getName ()+".jpg" );
 //                File dest = new File ( new ReadFile ( ).readProperty ( fileConfig, "screenshotpath" ) + File.separator + timestamp + ".png" );
                 FileUtils.copyFile ( F, dest );
+                FileUtils.copyFile ( F, dest1 );
+                Reporter.addScreenCaptureFromPath ( scenario.getName ()+".jpg" );
             }
         } catch (WebDriverException e) {
             scenario.write ( e.getMessage ( ) );

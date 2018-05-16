@@ -8,6 +8,7 @@ import java.io.IOException;
 public abstract class AppDriver {
     public static WebDriver driver;
 
+
    /* private AppDriver ( ) {
         throw new IllegalStateException ( );
     }   */

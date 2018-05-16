@@ -9,8 +9,9 @@ Feature: Define Staff Type
     And click sign in to open erp home page
     Then user click payroll manager logo
 
+    #At page status default values should also be checked
   @Component @Scenario1
-  Scenario: Verify define staff type page status status while page load
+  Scenario: Verify define staff type page status while page load
     When user open define staff type page
     Then verify status of menu items displayed over define staff type page at page load
       | staff type textbox     | true  |
@@ -63,7 +64,7 @@ Feature: Define Staff Type
     And click on staff type textbox
     And click outside the staff type textbox
     Then a pop up message should be displayed for mendatory field correspoding to define staff type textbox
-#    But record should not be saved in define staff type table
+    But record should not be saved in define staff type table
 
   @Componenet @Scenario
   Scenario: Space acceptability at start in Defin Staff Type page
@@ -94,12 +95,12 @@ Feature: Define Staff Type
       | cancel Button          | true  |
       | message box            | false |
 
-#    @Component @Scenario6
-#  Scenario: Action on view
-#    When user open define staff type page
-#    And click on view
-#    Then verify if a grid is opening then saved data should be displayed
-#    But if record is not saved in define staff table a pop up message will be displayed
+  @Component @Scenario6
+  Scenario: Action on view
+    When user open define staff type page
+    And click on view
+    Then verify if a grid is opening then saved data should be displayed
+    But if record is not saved in define staff table a pop up message will be displayed
 
   @Componenet @Scenario
   Scenario: Action on Save
@@ -185,4 +186,4 @@ Feature: Define Staff Type
     And store the record fetched from define staff type page
     And hit on cancel over define staff type page
     Then enter staff type as the stored value and rest input fields over define staff type
-    And verify pop-up message of record duplicacy at the bottom of the page over define staff type page
+    And verify pop-up message of record duplicacy at the bottom of the define staff type page

@@ -15,7 +15,7 @@ import java.util.Properties;
 import static webdriver.AppDriver.driver;
 import static webdriver.AppDriver.getCurrentDriver;
 
-public class ReadFile {
+public class ReadFile extends GenericBaseClass {
     private static Properties prop = new Properties ( );
     String values = "";
 
@@ -38,30 +38,37 @@ public class ReadFile {
         WebDriverWait wait = new WebDriverWait ( driver, time );
         switch (locator) {
             case "id":
+//                this.wait ();
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.id ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.id ( value ) );
                 break;
             case "xpath":
+//                this.wait ();
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.xpath ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.xpath ( value ) );
                 break;
             case "name":
+//                this.wait ();
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.name ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.name ( value ) );
                 break;
             case "linktext":
+//                this.wait ();
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.linkText ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.linkText ( value ) );
                 break;
             case "tagname":
+//                wait.wait ( time );
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.tagName ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.tagName ( value ) );
                 break;
             case "cssselector":
+//                wait.wait ( time );
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.cssSelector ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.cssSelector ( value ) );
                 break;
             case "classname":
+  //              wait.wait ( time );
 //                wait.until ( ExpectedConditions.presenceOfAllElementsLocatedBy ( By.className ( value ) ) );
                 webelement = getCurrentDriver ( ).findElement ( By.className ( value ) );
                 break;
@@ -107,5 +114,15 @@ public class ReadFile {
 
         return webelement;
     }
+
+
+//    public String getReportConfigPath ( ) throws IOException {
+//        String reportPath = readProperty ( fileConfig, "reportConfigPath" );
+//        if ( reportPath != null ) {
+//            return reportPath;
+//        } else {
+//            throw new RuntimeException ( "Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath" );
+//        }
+//    }
 
 }

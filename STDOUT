@@ -1,0 +1,21 @@
+#Author <Rohit>
+#Date : <24-03-2018>
+Feature: Define Staff Type
+
+  Background: Steps to open payroll manager landing page # featurefiles/DefineStaffType.feature:6
+    Given for url                                        # GenericTestSteps.forUrl()
+    When user enter username and password                # GenericTestSteps.userEnterUsernameAndPassword()
+    And click sign in to open erp home page              # GenericTestSteps.clickSignInToOpenErpHomePage()
+    Then user click payroll manager logo                 # GenericTestSteps.userClickPayrollManagerLogo()
+Scenario is finishedcucumber.runtime.ScenarioImpl@31dfc6f5
+
+  #At page status default values should also be checked
+  @Component @Scenario1
+  Scenario: Verify define staff type page status while page load                        # featurefiles/DefineStaffType.feature:14
+    When user open define staff type page                                               # Test.userOpenDefineStaffTypePage()
+    Then verify status of menu items displayed over define staff type page at page load # Test.verifyStatusOfMenuItemsDisplayedOverDefineStaffTypePageAtPageLoad(DataTable)
+      org.junit.ComparisonFailure: message box is active expected:<[message box]> but was:<[false]>
+      	at org.junit.Assert.assertEquals(Assert.java:115)
+      	at stepdefinitions.Test.verifyStatusOfMenuItemsDisplayedOverDefineStaffTypePageAtPageLoad(Test.java:53)
+      	at ✽.Then verify status of menu items displayed over define staff type page at page load(featurefiles/DefineStaffType.feature:16)
+

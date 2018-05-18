@@ -50,7 +50,7 @@ public class Test extends GenericBaseClass {
         boolean cancel_button = d1.getCancelButton ( ).isEnabled ( );
         Assert.assertEquals ( data.get ( 6 ).get ( 0 ).toString ( ) + " is not active", data.get ( 6 ).get ( 1 ).toString ( ), String.valueOf ( cancel_button ) );
         boolean message_box = d1.getDefineStaffTypeMessageBox ( ).getAttribute ( "style" ).contains ( "inline" );
-        Assert.assertEquals ( data.get ( 7 ).get ( 0 ).toString ( ) + " is active", data.get ( 7 ).get ( 0 ).toString ( ), String.valueOf ( message_box ) );
+        Assert.assertEquals ( data.get ( 7 ).get ( 0 ).toString ( ) + " is active", data.get ( 7 ).get ( 1 ).toString ( ), String.valueOf ( message_box ) );
     }
 
     /* Scenario : 2    * Acceptability in staff type textbox    */

@@ -20,7 +20,7 @@ Feature: Define Staff Type
       | save Button            | true  |
       | view Button            | true  |
       | print Button           | true  |
-      | cancel Button          | true  |
+      | cancel Button          | false |
       | message box            | false |
 
   @Component @Scenario2
@@ -45,7 +45,7 @@ Feature: Define Staff Type
       | staff type/                          | value supplied is accepted     | NaN                      |
       | staff type-                          | value supplied is accepted     | NaN                      |
       | staff / type                         | value supplied is accepted     | NaN                      |
-      | staff - type                         | value supplied is accepted     | NaN                      |
+      | staff - type                         | value supplied is not accepted | NaN                      |
 
   @Componenet @Scenario3
   Scenario Outline: Length limit of staff type textbox

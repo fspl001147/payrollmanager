@@ -4,9 +4,10 @@ package runnerfile;
 import com.github.mkolisnyk.cucumber.runner.BeforeSuite;
 import com.github.mkolisnyk.cucumber.runner.ExtendedCucumber;
 import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
-@RunWith(ExtendedCucumber.class)
+@RunWith(Cucumber.class)
 @CucumberOptions(
         features = {"featurefiles/DefineProfession.feature"}
         , glue = {"stepdefinitions"}

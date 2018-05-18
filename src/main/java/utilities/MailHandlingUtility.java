@@ -3,6 +3,7 @@ package utilities;
 import cucumber.api.Scenario;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.*;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -27,7 +28,7 @@ public class MailHandlingUtility {
         email.send ( );
     }
 
-     public void sendMailWithAttachment () throws EmailException, IOException {
+    public void sendMailWithAttachment ( ) throws EmailException, IOException {
         // Establishing smtp credentials
         MultiPartEmail email = new MultiPartEmail ( );
         email.setHostName ( "smtp.gmail.com" );
@@ -39,33 +40,33 @@ public class MailHandlingUtility {
         email.setFrom ( "rohit.kumar@franciscansolutions.info" );
         email.setSubject ( "Test Mail" );
         email.setMsg ( "Please find attached bug reoprt... :-)" );
-//          email.addTo ( "piyush.nautiyal@franciscansolutions.in" );
-//        email.addCc ( "pradeep.gusain@franciscansolutions.net" );
-        email.addTo ( "rohit.1102.rk@gmail.com" );
-//        email.addCc ( "rohitsharma11021994@gmail.com" );
-//        email.addBcc ( "rohit.1102@yahoo.com" );
+          email.addTo ( "piyush.nautiyal@franciscansolutions.in" );
+        email.addBcc( "pradeep.gusain@franciscansolutions.net" );
+        email.addBcc ( "rohit.1102.rk@gmail.com" );
+        email.addBcc ( "priya.ahuja@liveacts.in" );
+        email.addBcc ( "deepak.chandale@franciscansolutions.in" );
 
-         //creating directory to convert
+        //creating directory to convert
         // Create the attachment
         EmailAttachment attachment = new EmailAttachment ( );
         attachment.setPath ( "output.zip" );
         attachment.setDisposition ( EmailAttachment.ATTACHMENT );
         attachment.setDescription ( "Test Reports" );
         attachment.setName ( "Report.zip" );
-                        //        EmailAttachment attachment1 = new EmailAttachment ( );
-                        //        attachment1.setPath ( "output/report.html" );
-                        //        attachment1.setDisposition ( EmailAttachment.ATTACHMENT );
-                        //        attachment1.setDescription ( "Test Reports" );
-                        //        attachment1.setName ( "Define Staff Type.html" );
-                        //        if ( scenario.isFailed ( ) ) {
-                        //            EmailAttachment attachment2 = new EmailAttachment ( );
-                        //            attachment2.setPath ("output/" + scenario.getName ( ) + ".jpg" );
-                        //            attachment2.setDisposition ( EmailAttachment.ATTACHMENT );
-                        //            attachment2.setDescription ( scenario.getName ( ) );
-                        //            attachment2.setName ( scenario.getName ( ) + ".jpg" );
-                        //            // add the attachment
-                        //            email.attach ( attachment2 );
-                        //        }
+        //    EmailAttachment attachment1 = new EmailAttachment ( );
+        //    attachment1.setPath ( "output/report.html" );
+        //    attachment1.setDisposition ( EmailAttachment.ATTACHMENT );
+        //    attachment1.setDescription ( "Test Reports" );
+        //    attachment1.setName ( "Define Staff Type.html" );
+        //    if ( scenario.isFailed ( ) ) {
+        //        EmailAttachment attachment2 = new EmailAttachment ( );
+        //        attachment2.setPath ("output/" + scenario.getName ( ) + ".jpg" );
+        //        attachment2.setDisposition ( EmailAttachment.ATTACHMENT );
+        //        attachment2.setDescription ( scenario.getName ( ) );
+        //        attachment2.setName ( scenario.getName ( ) + ".jpg" );
+        //        // add the attachment
+        //        email.attach ( attachment2 );
+        //    }
         email.attach ( attachment );
         // send the email
         email.send ( );
